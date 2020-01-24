@@ -80,7 +80,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/Buku"
+                            android:src="@drawable/buku"
                             />
 
                         <TextView
@@ -118,7 +118,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/Gedung"
+                            android:src="@drawable/gedung"
                             />
 
                         <TextView
@@ -163,7 +163,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/PersonalTrainer"/>
+                            android:src="@drawable/pt"/>
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -198,7 +198,7 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:src="@drawable/CS"
+                            android:src="@drawable/cs"
                             />
 
                         <TextView
