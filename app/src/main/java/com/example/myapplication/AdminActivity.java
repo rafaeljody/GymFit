@@ -55,10 +55,10 @@ public class AdminActivity extends AppCompatActivity {
                     case R.id.help:
                         help();
                         break;
-                    case R.id.tips1:
+                    case R.id.tbdata:
                         tambahh();
                         break;
-                    case R.id.gym1:
+                    case R.id.eddata:
                         editt();
                         break;
                     default:
