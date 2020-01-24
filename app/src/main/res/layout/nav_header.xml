@@ -8,6 +8,6 @@
     <ImageView
         android:layout_width="140dp"
         android:layout_height="140dp"
-        android:src="@drawable/logokuning"/>
+        android:src="@drawable/cobalogo2"/>
 
 </LinearLayout>

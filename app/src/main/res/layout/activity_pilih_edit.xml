@@ -35,7 +35,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="50sp"
                 android:gravity="center"
-                android:fontFamily="@font/montserrat_subrayada"/>
+                android:fontFamily="@font/montserratbold"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
@@ -65,7 +65,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="30sp"
                 android:gravity="center"
-                android:fontFamily="@font/montserrat_subrayada"/>
+                android:fontFamily="@font/montserratbold"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 </androidx.appcompat.widget.LinearLayoutCompat>

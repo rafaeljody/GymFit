@@ -40,14 +40,15 @@
                     <ImageView
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/logokuning"
+                        android:src="@drawable/cobalogo2"
                         />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Wanna healthy do gym"
+                        android:text="Today Better then Yesterday"
                         android:textColor="@color/C5"
+                        android:fontFamily="@font/montserratbold"
                         android:textSize="20sp"
                         />
 
@@ -114,7 +115,7 @@
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:fontFamily="@font/montserrat_subrayada"
+                                    android:fontFamily="@font/montserratsemibold"
                                     android:text="Tambah data" />
 
                             </LinearLayout>
@@ -151,8 +152,8 @@
 
                                 <TextView
                                     android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@font/montserrat_subrayada"
+                                    android:layout_height="18dp"
+                                    android:fontFamily="@font/montserratsemibold"
                                     android:text="Edit data" />
 
                             </LinearLayout>

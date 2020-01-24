@@ -19,7 +19,7 @@
             android:text="DAFTAR GYM"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:textStyle="bold" />
+            android:fontFamily="@font/montserratbold"/>
 
 
 
