@@ -67,7 +67,7 @@
                             android:layout_marginBottom="8dp"
                             app:cardBackgroundColor="@color/C4"
                             android:clickable="true"
-                            android:onClick="tips"
+                            android:onClick="tambah"
                             app:cardCornerRadius="16dp"
                             card_view:cardElevation="6dp"
                             card_view:cardPreventCornerOverlap="false">
@@ -104,7 +104,7 @@
                             android:layout_marginBottom="8dp"
                             app:cardBackgroundColor="@color/C4"
                             android:clickable="true"
-                            android:onClick="gym"
+                            android:onClick="edit"
                             app:cardCornerRadius="16dp"
                             card_view:cardElevation="6dp"
                             card_view:cardPreventCornerOverlap="false">

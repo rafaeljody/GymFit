@@ -48,13 +48,25 @@ public class MainActivity extends AppCompatActivity {
                 switch(id)
                 {
                     case R.id.login:
-                        login();
-                        break;
+                    login();
+                    break;
                     case R.id.about:
                         about();
                         break;
                     case R.id.help:
                         help();
+                        break;
+                    case R.id.tips1:
+                        tipss();
+                        break;
+                    case R.id.gym1:
+                        gymm();
+                        break;
+                    case R.id.trainer1:
+                        trainerr();
+                        break;
+                    case R.id.cp1:
+                        cpp();
                         break;
                     default:
                         return true;
@@ -75,6 +87,24 @@ public class MainActivity extends AppCompatActivity {
     }
     public void help(){
         Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+        startActivity(intent);
+    }
+
+    public void tipss(){
+        Intent intent = new Intent(MainActivity.this, gym.class);
+        startActivity(intent);
+    }
+    public void gymm(){
+        Intent intent = new Intent(MainActivity.this, gym.class);
+        startActivity(intent);
+    }
+    public void trainerr(){
+        Intent intent = new Intent(MainActivity.this, trainer.class);
+        startActivity(intent);
+    }
+
+    public void cpp(){
+        Intent intent = new Intent(MainActivity.this, trainer.class);
         startActivity(intent);
     }
 
