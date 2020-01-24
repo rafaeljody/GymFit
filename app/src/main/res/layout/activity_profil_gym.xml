@@ -6,30 +6,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".profil_trainer">
-
+    tools:context=".profil_gym">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:scrollbars="none">
-
+        android:scrollbars="none"
+        android:fillViewport="true">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingBottom="50dp">
+            android:orientation="vertical">
+
 
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="345dp">
+                android:layout_height="355dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="225dp"
-                    android:background="@drawable/blue" />
+                    android:layout_height="220dp"
+                    android:background="@drawable/gedung" />
 
 
                 <FrameLayout
@@ -38,22 +37,21 @@
                     android:layout_alignParentBottom="true"
                     android:layout_centerInParent="true"
                     android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
                     android:elevation="3dp">
 
 
                     <FrameLayout
                         android:layout_width="match_parent"
-                        android:layout_height="225dp"
+                        android:layout_height="165dp"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginTop="47dp"
+                        android:layout_marginTop="0dp"
                         android:layout_marginRight="10dp"
                         android:elevation="5dp">
 
                         <com.dd.ShadowLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#ffffff"
+                            android:background="#FFFFFF"
                             shadow:sl_cornerRadius="10dp"
                             shadow:sl_dx="2dp"
                             shadow:sl_dy="2dp"
@@ -62,7 +60,7 @@
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="186dp"
+                                android:layout_height="match_parent"
                                 android:background="@drawable/rounded_corner_5dp"
                                 android:orientation="vertical">
 
@@ -71,44 +69,35 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_gravity="center_horizontal"
-                                    android:layout_marginTop="30dp"
                                     android:orientation="vertical">
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="30dp"
-                                        android:text="Nama Lengkap"
+                                        android:layout_marginTop="15dp"
+                                        android:text="Nama Gym"
                                         android:textColor="#4f4f4f"
                                         android:textSize="18.5sp" />
 
                                     <TextView
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:text="Nama Akun Sosmed"
+                                        android:layout_gravity="center_horizontal"
+                                        android:text="No Telepon"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
 
                                     <TextView
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="14dp"
-                                        android:text="Pengalaman Kerja"
+                                        android:text="Alamat Gym"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
 
                                 </LinearLayout>
-
-
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="bottom"
-                                android:layout_marginBottom="20dp"
-                                android:orientation="horizontal">
 
 
                             </LinearLayout>
@@ -117,18 +106,10 @@
                     </FrameLayout>
 
 
-                    <ImageView
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
-                        android:layout_gravity="center_horizontal"
-                        android:background="@drawable/circle"
-                        android:elevation="5dp" />
-
                 </FrameLayout>
 
 
             </RelativeLayout>
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -142,14 +123,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Sertifikasi"
+                    android:text="Alat dan Fasilitas"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
             </LinearLayout>
 
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvSertifikasi"
+                android:id="@+id/rvAlat"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
@@ -161,12 +142,12 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="36dp"
-                android:text="Spesialisasi"
+                android:text="Trainer"
                 android:textColor="#252527"
                 android:textSize="16.8sp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvSpesialisasi"
+                android:id="@+id/rvTrainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
@@ -174,8 +155,9 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
-        </LinearLayout>
 
+
+        </LinearLayout>
 
     </ScrollView>
 
