@@ -122,8 +122,7 @@
                         android:layout_height="120dp"
                         android:layout_gravity="center_horizontal"
                         android:background="@drawable/circle"
-                        android:elevation="5dp"
-                        android:src="@drawable/GEDUNG" />
+                        android:elevation="5dp" />
 
                 </FrameLayout>
 

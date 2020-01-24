@@ -9,7 +9,11 @@
     <color name="colorButton">#f2f2f0</color>
     <color name="colorBackground">#f2f2f0</color>
 
-    <color name="blue1">#429ffd</color>
-    <color name="blue2">#0960bd</color>
+    <color name="C1">#191970</color>
+    <color name="C2">#3d59ab</color>
+    <color name="C3">#ff9912</color>
+    <color name="C4">#ffd700</color>
+    <color name="C5">#ffffff</color>
+
 </resources>
 
