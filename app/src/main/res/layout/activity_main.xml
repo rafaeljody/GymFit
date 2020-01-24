@@ -80,12 +80,14 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:src="@drawable/Buku"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Edukasi"/>
+                            android:fontFamily="@font/montserrat_subrayada"
+                            android:text="Edukasi" />
 
                     </LinearLayout>
 
@@ -116,12 +118,14 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:src="@drawable/Gedung"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Profil Gym"/>
+                            android:fontFamily="@font/montserrat_subrayada"
+                            android:text="Profil Gym" />
 
                     </LinearLayout>
 
@@ -158,11 +162,13 @@
 
                         <ImageView
                             android:layout_width="100dp"
-                            android:layout_height="100dp" />
+                            android:layout_height="100dp"
+                            android:src="@drawable/PersonalTrainer"/>
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/montserrat_subrayada"
                             android:text="Personal Trainer" />
 
                     </LinearLayout>
@@ -192,12 +198,14 @@
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:src="@drawable/CS"
                             />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Contact Person"/>
+                            android:fontFamily="@font/montserrat_subrayada"
+                            android:text="Contact Person" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
