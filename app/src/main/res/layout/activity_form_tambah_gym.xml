@@ -23,6 +23,7 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:text="Form Input Data Gym"
+                android:textStyle="bold"
                 android:textSize="20sp" />
 
             <EditText
@@ -531,7 +532,7 @@
                     android:layout_gravity="center"
                     android:layout_margin="16dp"
                     android:background="@drawable/roundedbutton"
-                    android:text="Upload Foto"
+                    android:text="Upload Foto Gym Machine"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
@@ -579,7 +580,7 @@
 
 
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_submit"
                 android:layout_width="174dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
