@@ -47,6 +47,42 @@
                 android:layout_margin="5dp"
                 android:hint="Nomor Telepon" />
 
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="FOTO PROFIL GYM"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+
+                <include layout="@layout/activity_content_foto_profil_gym" />
+
+                <Button
+                    android:id="@+id/btn_UploadGym"
+                    android:layout_width="174dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/roundedbutton"
+                    android:text="Upload Foto Profil"
+                    android:textColor="@android:color/white" />
+
+            </LinearLayout>
+
+
+
+
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -248,54 +284,6 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="30dp">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="left"
-                    android:layout_marginLeft="5dp"
-                    android:text="BIAYA PERSONAL TRAINER"
-                    android:textStyle="bold"
-                    android:textSize="15sp" />
-
-                <EditText
-                    android:id="@+id/edt_by5pert"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="5dp"
-                    android:hint="5x Pertemuan"
-                    android:inputType="number" />
-
-                <EditText
-                    android:id="@+id/edt_by10pert"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:hint="10x Pertemuan"
-                    android:inputType="number" />
-
-                <EditText
-                    android:id="@+id/edt_by15pert"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:hint="15x Pertemuan"
-                    android:inputType="number" />
-
-                <EditText
-                    android:id="@+id/edt_by20pert"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="5dp"
-                    android:hint="20x Pertemuan"
-                    android:inputType="number" />
-
-            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -536,7 +524,7 @@
                 <include layout="@layout/activity_content_foto_mesin" />
 
                 <Button
-                    android:id="@+id/btn_Upload"
+                    android:id="@+id/btn_UploadMesin"
                     android:layout_width="174dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
@@ -557,6 +545,36 @@
 
 
 
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="5dp"
+                    android:text="KEUNGGULAN GYM"
+                    android:textStyle="bold"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/edt_Keunggulan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:hint="Masukkan Keunggulan Gym Anda"
+                    android:inputType="textMultiLine" />
+
+
+
+
+
+
+            </LinearLayout>
 
 
             <Button
