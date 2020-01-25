@@ -153,6 +153,7 @@
                     android:paddingLeft="5dp"
                     android:paddingRight="5dp"
                     android:paddingTop="5dp"
+                    android:gravity="center_horizontal"
                     app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
                     <Button
@@ -163,23 +164,13 @@
                         android:drawableRight="@android:drawable/ic_menu_gallery"/>
 
                     <ImageView
+                        android:id="@+id/imageView"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
-                        android:scaleType="centerCrop"
                         android:layout_weight="1"
-                        android:id="@+id/imageView" />
+                        android:scaleType="centerCrop" />
 
                 </LinearLayout>
-
-                <Button
-                    android:id="@+id/btn_UploadTrainer"
-                    android:layout_width="174dp"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_margin="16dp"
-                    android:background="@drawable/roundedbutton"
-                    android:text="Upload Foto Profil"
-                    android:textColor="@android:color/white" />
 
             </LinearLayout>
 

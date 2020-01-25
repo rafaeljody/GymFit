@@ -50,8 +50,10 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
 
         mStorageReference= FirebaseStorage.getInstance().getReference("profile_trainer");
 
+        // inisialisasi button submit dan upload
+        btSubmit        = (Button) findViewById(R.id.btn_submit);
+
         ch=(Button)findViewById(R.id.buttonChoose);
-        up=(Button)findViewById(R.id.btn_UploadTrainer);
         img=(ImageView)findViewById(R.id.imageView);
         ch.setOnClickListener(new View.OnClickListener(){
                                   @Override
@@ -60,17 +62,6 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                                   }
                               }
         );
-        up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if(uploadTask!=null && uploadTask.isInProgress()){
-                    Toast.makeText(FormTambahTrainerActivity.this, "upload in progress",Toast.LENGTH_LONG).show();
-                }else{
-                    FileUploader();
-                }
-
-            }
-        });
 
         //Inisialisasi Data Trainer
         etNamaTrainer   = (EditText) findViewById(R.id.edt_NamaTrainer);
@@ -84,9 +75,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
         etSertifikasi   = (EditText) findViewById(R.id.edt_Sertifikasi);
         etAhli          = (EditText) findViewById(R.id.edt_Keahlian);
 
-        // inisialisasi button submit dan upload
-        btUpload        = (Button) findViewById(R.id.btn_UploadTrainer);
-        btSubmit        = (Button) findViewById(R.id.btn_submit);
+
 
         // inisialisasi Firebase
         database = FirebaseDatabase.getInstance().getReference();
@@ -95,6 +84,11 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
         btSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(uploadTask!=null && uploadTask.isInProgress()){
+                    Toast.makeText(FormTambahTrainerActivity.this, "upload in progress",Toast.LENGTH_LONG).show();
+                }else{
+                    FileUploader();
+                }
                 personalTrainer(new personalTrainer(
                         etNamaTrainer.getText().toString(),
                         etPendidikan.getText().toString(),
@@ -157,7 +151,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
     }
 
     public void personalTrainer(personalTrainer personal_trainer){
-        database.child("DATA TRAINER").push().setValue(personal_trainer).addOnSuccessListener(this,
+        database.child("DATA TRAINER TEST").push().setValue(personal_trainer).addOnSuccessListener(this,
                 new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

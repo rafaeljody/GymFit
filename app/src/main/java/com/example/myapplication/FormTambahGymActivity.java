@@ -58,16 +58,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
         etTemu15        = (EditText) findViewById(R.id.edt_byLimabelsPert);
         etTemu20        = (EditText) findViewById(R.id.edt_byDuapulPert);
 
-        //inisialisasi Checkbox dari Fasilitas Gym
-        cb_ac = findViewById(R.id.cb_FstAc);
-        cb_kipas = findViewById(R.id.cb_FstKipas);
-        cb_handuk = findViewById(R.id.cb_FstHanduk);
-        cb_Air = findViewById(R.id.cb_FstAirMinum);
-        cb_kamar_mandi = findViewById(R.id.cb_FstKamarMandi);
-        cb_ruangLoker = findViewById(R.id.cb_FstLoker);
-        cb_sauna = findViewById(R.id.cb_FstSauna);
-        cb_wifi = findViewById(R.id.cb_FstWifi);
-        cb_kolamRenang = findViewById(R.id.cb_FstKolam);
+
 
         //inisialisasi Button Submit dan Upload
         btSubmitDB      = (Button) findViewById(R.id.btn_submit);
