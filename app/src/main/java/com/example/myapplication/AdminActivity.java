@@ -59,8 +59,8 @@ public class AdminActivity extends AppCompatActivity {
                 Activity selectedActivity = null;
                 switch(id)
                 {
-                    case R.id.login:
-                        login();
+                    case R.id.logout:
+                        logout();
                         break;
                     case R.id.about:
                         about();
@@ -83,8 +83,8 @@ public class AdminActivity extends AppCompatActivity {
 
     }
 
-    public void login(){
-        Intent intent = new Intent(AdminActivity.this, LoginActivity.class);
+    public void logout(){
+        Intent intent = new Intent(AdminActivity.this, MainActivity.class);
         startActivity(intent);
     }
     public void about(){
