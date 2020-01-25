@@ -5,7 +5,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_margin="16dp"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".FormTambahGymActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,6 +23,7 @@
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:text="Form Input Data Gym"
+                android:textStyle="bold"
                 android:textSize="20sp" />
 
             <EditText
@@ -530,7 +532,7 @@
                     android:layout_gravity="center"
                     android:layout_margin="16dp"
                     android:background="@drawable/roundedbutton"
-                    android:text="Upload Foto"
+                    android:text="Upload Foto Gym Machine"
                     android:textColor="@android:color/white" />
 
             </LinearLayout>
