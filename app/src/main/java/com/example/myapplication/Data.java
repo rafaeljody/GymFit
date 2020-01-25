@@ -20,6 +20,10 @@ public class Data implements Serializable {
     private String biaya_5Pertemuan, biaya_10Pertemuan,
             biaya_15Pertemuan, biaya_20Pertemuan;
 
+    private String fasilitas;
+    private String kelas;
+    private String peralatan_kebugaran;
+    private String keunggulan_Gym;
 
     public Data() {
     }
@@ -30,7 +34,8 @@ public class Data implements Serializable {
                 String biaya_duaBulan, String biaya_tigaBulan,
                 String enamBulan, String biayaPerpanjangan,
                 String biaya_5Pertemuan, String biaya_10Pertemuan,
-                String biaya_15Pertemuan, String biaya_20Pertemuan) {
+                String biaya_15Pertemuan, String biaya_20Pertemuan,
+                String fasilitas, String kelas, String peralatan_kebugaran, String keunggulan_Gym) {
 
         this.namaGym = namaGym;
         this.alamatGym = alamatGym;
@@ -46,6 +51,42 @@ public class Data implements Serializable {
         this.biaya_10Pertemuan = biaya_10Pertemuan;
         this.biaya_15Pertemuan = biaya_15Pertemuan;
         this.biaya_20Pertemuan = biaya_20Pertemuan;
+        this.fasilitas = fasilitas;
+        this.kelas = kelas;
+        this.peralatan_kebugaran = peralatan_kebugaran;
+        this.keunggulan_Gym = keunggulan_Gym;
+    }
+
+    public String getFasilitas() {
+        return fasilitas;
+    }
+
+    public void setFasilitas(String fasilitas) {
+        this.fasilitas = fasilitas;
+    }
+
+    public String getKelas() {
+        return kelas;
+    }
+
+    public void setKelas(String kelas) {
+        this.kelas = kelas;
+    }
+
+    public String getPeralatan_kebugaran() {
+        return peralatan_kebugaran;
+    }
+
+    public void setPeralatan_kebugaran(String peralatan_kebugaran) {
+        this.peralatan_kebugaran = peralatan_kebugaran;
+    }
+
+    public String getKeunggulan_Gym() {
+        return keunggulan_Gym;
+    }
+
+    public void setKeunggulan_Gym(String keunggulan_Gym) {
+        this.keunggulan_Gym = keunggulan_Gym;
     }
 
     public String getNamaGym() {
@@ -177,6 +218,10 @@ public class Data implements Serializable {
                 ", biaya_10Pertemuan='" + biaya_10Pertemuan + '\'' +
                 ", biaya_15Pertemuan='" + biaya_15Pertemuan + '\'' +
                 ", biaya_20Pertemuan='" + biaya_20Pertemuan + '\'' +
+                ", fasilitas='" + fasilitas + '\'' +
+                ", kelas='" + kelas + '\'' +
+                ", peralatan_kebugaran='" + peralatan_kebugaran + '\'' +
+                ", keunggulan_Gym='" + keunggulan_Gym + '\'' +
                 '}';
     }
 }

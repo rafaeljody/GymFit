@@ -25,6 +25,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
     EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
     EditText etPendaftar, etInsidental, etBiaya1, etBiaya2, etBiaya3, etBiaya6, etPerpanjangan; // Paket Membership
     EditText etTemu5, etTemu10, etTemu15, etTemu20; // Biaya Personal Trainer
+    EditText etFasilitas, etKelas, etPeralatan, etKeunggulan;
 
     //checkbox fasilitas Gym
     CheckBox cb_ac,cb_kipas,cb_handuk, cb_Air, cb_kamar_mandi,
@@ -58,7 +59,10 @@ public class FormTambahGymActivity extends AppCompatActivity {
         etTemu15        = (EditText) findViewById(R.id.edt_byLimabelsPert);
         etTemu20        = (EditText) findViewById(R.id.edt_byDuapulPert);
 
-
+        etFasilitas     = (EditText) findViewById(R.id.edt_Fasilitas);
+        etKelas         = (EditText) findViewById(R.id.edt_Kelas);
+        etPeralatan     = (EditText) findViewById(R.id.edt_Peralatan);
+        etKeunggulan    = (EditText) findViewById(R.id.edt_Keunggulan);
 
         //inisialisasi Button Submit dan Upload
         btSubmitDB      = (Button) findViewById(R.id.btn_submit);
@@ -66,7 +70,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
         btUploadMesin   = (Button) findViewById(R.id.btn_UploadMesin);
 
         // Inisialisasi Fireb,ase
-        database = FirebaseDatabase.getInstance().getReference().child("GYM FIT");
+        database = FirebaseDatabase.getInstance().getReference();
 
         //Onclick pada Button Submit
         btSubmitDB.setOnClickListener(new View.OnClickListener() {
@@ -80,26 +84,10 @@ public class FormTambahGymActivity extends AppCompatActivity {
                         etBiaya3.getText().toString(),etBiaya6.getText().toString(),
                         etPerpanjangan.getText().toString(),etTemu5.getText().toString(),
                         etTemu10.getText().toString(),etTemu15.getText().toString(),
-                        etTemu20.getText().toString()));
+                        etTemu20.getText().toString(),
+                        etFasilitas.getText().toString(), etKelas.getText().toString(),
+                        etPeralatan.getText().toString(),etKeunggulan.getText().toString()));
 
-                if (cb_ac.isChecked()){
-                    database.child("Fasilitas-1").setValue("Air Conditioner");
-                }
-                if (cb_kipas.isChecked()){
-                    database.child("Fasilitas-2").setValue("Kipas Angin");
-                }
-                if (cb_handuk.isChecked()){
-                    database.child("Fasilitas-3").setValue("Handuk");
-                }
-                if (cb_Air.isChecked()){
-                    database.child("Fasilitas-4").setValue("Air Minum");
-                }
-                if (cb_kamar_mandi.isChecked()){
-                    database.child("Fasilitas-5").setValue("Kamar Mandi");
-                }
-                if (cb_ruangLoker.isChecked()){
-                    database.child("Fasilitas-6").setValue("Ruang Loker");
-                }
             }
         });
 
@@ -130,17 +118,18 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 etTemu15.setText("");
                 etTemu20.setText("");
 
+                etFasilitas.setText("");
+                etKelas.setText("");
+                etPeralatan.setText("");
+                etKeunggulan.setText("");
+
+
 
                 Snackbar.make(findViewById(R.id.btn_submit),"Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
             }
         });
 
-        database.child("Fasilitas-GYM").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
-            @Override
-            public void onSuccess(Void aVoid) {
 
-            }
-        });
 //        database.child("Paket-Membership").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
 //            @Override
 //            public void onSuccess(Void aVoid) {
