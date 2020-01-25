@@ -20,10 +20,18 @@ public class Data implements Serializable {
     private String biaya_5Pertemuan, biaya_10Pertemuan,
             biaya_15Pertemuan, biaya_20Pertemuan;
 
+
     public Data() {
     }
 
-    public Data(String namaGym, String alamatGym, String teleponGym, String biaya_pendaftaran, String biaya_insindental, String biaya_satuBulan, String biaya_duaBulan, String biaya_tigaBulan, String enamBulan, String biayaPerpanjangan, String biaya_5Pertemuan, String biaya_10Pertemuan, String biaya_15Pertemuan, String biaya_20Pertemuan) {
+    public Data(String namaGym, String alamatGym,
+                String teleponGym, String biaya_pendaftaran,
+                String biaya_insindental, String biaya_satuBulan,
+                String biaya_duaBulan, String biaya_tigaBulan,
+                String enamBulan, String biayaPerpanjangan,
+                String biaya_5Pertemuan, String biaya_10Pertemuan,
+                String biaya_15Pertemuan, String biaya_20Pertemuan) {
+
         this.namaGym = namaGym;
         this.alamatGym = alamatGym;
         this.teleponGym = teleponGym;

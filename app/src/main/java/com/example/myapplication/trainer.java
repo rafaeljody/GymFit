@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 public class trainer extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

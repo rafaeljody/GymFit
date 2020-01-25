@@ -22,7 +22,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
     private DatabaseReference database; // untuk mengambil root pada database
 
     Button btUpload,btSubmitDB,btUploadMesin; //button upload dan submit
-    private EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
+    EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
     EditText etPendaftar, etInsidental, etBiaya1, etBiaya2, etBiaya3, etBiaya6, etPerpanjangan; // Paket Membership
     EditText etTemu5, etTemu10, etTemu15, etTemu20; // Biaya Personal Trainer
 
@@ -31,7 +31,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_tambah_gym);
-
 
         //inisialisasi Detail GYM
         etNamaGym       = (EditText) findViewById(R.id.edt_NamaGym);
@@ -61,13 +60,12 @@ public class FormTambahGymActivity extends AppCompatActivity {
         // Inisialisasi Fireb,ase
         database = FirebaseDatabase.getInstance().getReference();
 
-
-
         //Onclick pada Button Submit
         btSubmitDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                submitData(new Data(etNamaGym.getText().toString(),
+                submitData(new Data(
+                        etNamaGym.getText().toString(),
                         etAlamatGym.getText().toString(),etNomorHP.getText().toString(),
                         etPendaftar.getText().toString(),etInsidental.getText().toString(),
                         etBiaya1.getText().toString(),etBiaya2.getText().toString(),
@@ -84,9 +82,13 @@ public class FormTambahGymActivity extends AppCompatActivity {
         database.child("Detail-GYM").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
+
+                // set data Detail gym
                 etNamaGym.setText("");
                 etAlamatGym.setText("");
                 etNomorHP.setText("");
+
+                //set data paket membership
                 etPendaftar.setText("");
                 etInsidental.setText("");
                 etBiaya1.setText("");
@@ -94,6 +96,8 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 etBiaya3.setText("");
                 etBiaya6.setText("");
                 etPerpanjangan.setText("");
+
+                //set data biaya personal trainer
                 etTemu5.setText("");
                 etTemu10.setText("");
                 etTemu15.setText("");
