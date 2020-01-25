@@ -1,11 +1,16 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -16,6 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 
 public class gym extends AppCompatActivity {
+
 
     private RecyclerView mGymList;
     private DatabaseReference mDatabase;
@@ -46,6 +52,7 @@ public class gym extends AppCompatActivity {
         };
 
         mGymList.setAdapter(firebaseRecyclerAdapter);
+
     }
 
     public static class DataViewHolder extends RecyclerView.ViewHolder
@@ -65,4 +72,6 @@ public class gym extends AppCompatActivity {
             postAlamat.setText(ala);
         }
     }
+
+
 }
