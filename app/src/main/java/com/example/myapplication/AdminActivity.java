@@ -13,6 +13,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
 
 public class AdminActivity extends AppCompatActivity {
 
@@ -20,6 +23,12 @@ public class AdminActivity extends AppCompatActivity {
     private DrawerLayout dl;
     private ActionBarDrawerToggle t;
     private NavigationView nv;
+
+
+    //ini firebase
+    DatabaseReference reference;
+    FirebaseUser user;
+    FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +38,10 @@ public class AdminActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle(" ");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        //ini firebase
+        auth = FirebaseAuth.getInstance();
+        user = auth.getCurrentUser();
 
 
         dl = (DrawerLayout)findViewById(R.id.activity_main);

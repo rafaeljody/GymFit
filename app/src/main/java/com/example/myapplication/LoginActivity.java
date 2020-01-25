@@ -83,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
     private void initView() {
         edtEmail = findViewById(R.id.edt_email);
         edtPassword = findViewById(R.id.edt_password);
-        btnLogin = findViewById(R.id.btn_login);
+        btnLogin = findViewById(R.id.btn_submit);
         auth = FirebaseAuth.getInstance();
     }
 }
