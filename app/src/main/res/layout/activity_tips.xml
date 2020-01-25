@@ -1,39 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".TipsActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tb"
+    <TextView
+        android:id="@+id/counter"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center|center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/round_style5"
+        android:fontFamily="@font/montserratbold"
+        android:foregroundGravity="center|center_horizontal"
+        android:gravity="center|center_horizontal"
+        android:lineSpacingExtra="4sp"
+        android:text="1/10"
+        android:textAlignment="center"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <View
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="352dp"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/round_style6" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/slideFaktaTips"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <TextView
+        android:id="@+id/title_fakta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/C1"
-        app:contentInsetStart="0dp">
-
-        <TextView
-            android:id="@+id/article_heading"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="EDUKASI"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:fontFamily="@font/montserratbold"/>
-
-
-
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_main"
-        android:layout_below="@id/tb"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/C5"
-        android:scrollbars="vertical"
-        />
-
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/montserratbold"
+        android:text="EDUKASI"
+        android:textColor="@color/C5"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 </RelativeLayout>
