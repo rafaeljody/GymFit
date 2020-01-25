@@ -70,7 +70,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
     }
 
     public void personalTrainer(personalTrainer personal_trainer){
-        database.child("Input Data Trainer : ").push().setValue(personal_trainer).addOnSuccessListener(this,
+        database.child("DATA TRAINER").push().setValue(personal_trainer).addOnSuccessListener(this,
                 new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

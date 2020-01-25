@@ -19,12 +19,18 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class FormTambahGymActivity extends AppCompatActivity {
 
-    private DatabaseReference database; // untuk mengambil root pada database
+    DatabaseReference database; // untuk mengambil root pada database
 
     Button btUpload,btSubmitDB,btUploadMesin; //button upload dan submit
     EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
     EditText etPendaftar, etInsidental, etBiaya1, etBiaya2, etBiaya3, etBiaya6, etPerpanjangan; // Paket Membership
     EditText etTemu5, etTemu10, etTemu15, etTemu20; // Biaya Personal Trainer
+
+    //checkbox fasilitas Gym
+    CheckBox cb_ac,cb_kipas,cb_handuk, cb_Air, cb_kamar_mandi,
+    cb_ruangLoker, cb_sauna, cb_wifi, cb_kolamRenang;
+
+
 
 
     @Override
@@ -52,13 +58,24 @@ public class FormTambahGymActivity extends AppCompatActivity {
         etTemu15        = (EditText) findViewById(R.id.edt_byLimabelsPert);
         etTemu20        = (EditText) findViewById(R.id.edt_byDuapulPert);
 
+        //inisialisasi Checkbox dari Fasilitas Gym
+        cb_ac = findViewById(R.id.cb_FstAc);
+        cb_kipas = findViewById(R.id.cb_FstKipas);
+        cb_handuk = findViewById(R.id.cb_FstHanduk);
+        cb_Air = findViewById(R.id.cb_FstAirMinum);
+        cb_kamar_mandi = findViewById(R.id.cb_FstKamarMandi);
+        cb_ruangLoker = findViewById(R.id.cb_FstLoker);
+        cb_sauna = findViewById(R.id.cb_FstSauna);
+        cb_wifi = findViewById(R.id.cb_FstWifi);
+        cb_kolamRenang = findViewById(R.id.cb_FstKolam);
+
         //inisialisasi Button Submit dan Upload
         btSubmitDB      = (Button) findViewById(R.id.btn_submit);
         btUpload        = (Button) findViewById(R.id.btn_UploadGym);
         btUploadMesin   = (Button) findViewById(R.id.btn_UploadMesin);
 
         // Inisialisasi Fireb,ase
-        database = FirebaseDatabase.getInstance().getReference();
+        database = FirebaseDatabase.getInstance().getReference().child("GYM FIT");
 
         //Onclick pada Button Submit
         btSubmitDB.setOnClickListener(new View.OnClickListener() {
@@ -73,6 +90,25 @@ public class FormTambahGymActivity extends AppCompatActivity {
                         etPerpanjangan.getText().toString(),etTemu5.getText().toString(),
                         etTemu10.getText().toString(),etTemu15.getText().toString(),
                         etTemu20.getText().toString()));
+
+                if (cb_ac.isChecked()){
+                    database.child("Fasilitas-1").setValue("Air Conditioner");
+                }
+                if (cb_kipas.isChecked()){
+                    database.child("Fasilitas-2").setValue("Kipas Angin");
+                }
+                if (cb_handuk.isChecked()){
+                    database.child("Fasilitas-3").setValue("Handuk");
+                }
+                if (cb_Air.isChecked()){
+                    database.child("Fasilitas-4").setValue("Air Minum");
+                }
+                if (cb_kamar_mandi.isChecked()){
+                    database.child("Fasilitas-5").setValue("Kamar Mandi");
+                }
+                if (cb_ruangLoker.isChecked()){
+                    database.child("Fasilitas-6").setValue("Ruang Loker");
+                }
             }
         });
 
@@ -102,7 +138,16 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 etTemu10.setText("");
                 etTemu15.setText("");
                 etTemu20.setText("");
+
+
                 Snackbar.make(findViewById(R.id.btn_submit),"Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
+            }
+        });
+
+        database.child("Fasilitas-GYM").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
+            @Override
+            public void onSuccess(Void aVoid) {
+
             }
         });
 //        database.child("Paket-Membership").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
