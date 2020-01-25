@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".form_edit_data_trainer">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:elevation="0dp"
+        android:background="@color/C1"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-500dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:cardBackgroundColor="@color/C5"
+        card_view:cardCornerRadius="30dp"
+        card_view:cardElevation="4dp"
+        card_view:cardMaxElevation="6dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="Form Edit Data Trainer"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_editNamaTrainer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="Nama Trainer"
+                        android:importantForAutofill="no" />
+
+                    <EditText
+                        android:id="@+id/edt_editPend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Pendidikan Formal Terakhir" />
+
+                    <EditText
+                        android:id="@+id/edt_editHomeBase"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Gym Home Base" />
+
+                    <EditText
+                        android:id="@+id/edt_editOnCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="On Call Area"
+                        android:inputType="textMultiLine"/>
+
+                    <EditText
+                        android:id="@+id/edt_editNomorTelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Nomor Telephone"
+                        android:inputType="number"/>
+
+                    <EditText
+                        android:id="@+id/edt_editMedsos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Nama Akun Media Sosial" />
+
+                    <EditText
+                        android:id="@+id/edt_editPengKerja"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Pengalaman Kerja"
+                        android:inputType="textMultiLine"/>
+
+                    <EditText
+                        android:id="@+id/edt_editTarifPert"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Tarif Pertemuan (/bulan)"
+                        android:inputType="textMultiLine"/>
+
+                    <EditText
+                        android:id="@+id/edt_editSertifikasi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Sertifikasi"
+                        android:inputType="textMultiLine"/>
+
+                    <EditText
+                        android:id="@+id/edt_editKeahlian"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Keahlian"
+                        android:inputType="textMultiLine"/>
+
+
+                    <Button
+                        android:id="@+id/btn_editSubmit"
+                        android:layout_width="174dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/roundedbutton"
+                        android:text="Submit"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

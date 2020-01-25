@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".content_foto_trainer_gym"></activity>
+        <activity android:name=".form_edit_data_trainer"></activity>
+        <activity android:name=".form_edit_data_gym" />
+        <activity android:name=".content_foto_trainer_gym" />
         <activity android:name=".TipsActivity" />
         <activity android:name=".CpActivity" />
         <activity android:name=".content_foto_profil_trainer" />

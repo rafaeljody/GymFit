@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    tools:context=".form_edit_data_gym">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:elevation="0dp"
+        android:background="@color/C1"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="-500dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:cardBackgroundColor="@color/C5"
+        card_view:cardCornerRadius="30dp"
+        card_view:cardElevation="4dp"
+        card_view:cardMaxElevation="6dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:text="Form Edit Data Gym"
+                        android:textStyle="bold"
+                        android:textSize="20sp" />
+
+                    <EditText
+                        android:id="@+id/edt_editNamaGym"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:hint="Nama Gym"
+                        android:importantForAutofill="no" />
+
+                    <EditText
+                        android:id="@+id/edt_editAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Alamat gym" />
+
+                    <EditText
+                        android:id="@+id/edt_editNoTelp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:hint="Nomor Telepon" />
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="PAKET MEMBERSHIP"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_editPktPendaftaran"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:hint="Pendaftaran"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editPktInsidental"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Insidental"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editPktSatubln"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Biaya 1 bulan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editPktDuabln"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Biaya 2 bulan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editPktTigabln"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Biaya 3 bulan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editPktEnambln"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Biaya 6 bulan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editPktPerpanjangan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Biaya Perpanjangan"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="BIAYA PERSONAL TRAINER"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_editByLimaPert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:hint="5x Pertemuan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editBySepulPert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="10x Pertemuan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editByLimabelsPert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="15x Pertemuan"
+                            android:inputType="number" />
+
+                        <EditText
+                            android:id="@+id/edt_editByDuapulPert"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="20x Pertemuan"
+                            android:inputType="number" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="FASILITAS GYM"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_editFasilitas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Edit fasilitas-fasilitas yang terdapat dalam Gym Anda"
+                            android:inputType="textMultiLine" />
+
+
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="KELAS"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_editKelas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Edit kelas-kelas yang terdapat dalam Gym Anda (Aerobik,Zumba,dll)"
+                            android:inputType="textMultiLine" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="PERALATAN KEBUGARAN"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_editPeralatan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:hint="Edit Peralatan-peralatan yang terdapat dalam Gym Anda (Treadmill,Gym Ball,dll)"
+                            android:inputType="textMultiLine" />
+
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="KEUNGGULAN GYM"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
+
+                        <EditText
+                            android:id="@+id/edt_editKeunggulan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:hint="Edit Keunggulan Gym Anda"
+                            android:inputType="textMultiLine" />
+
+
+
+
+
+
+                    </LinearLayout>
+
+
+                    <Button
+                        android:id="@+id/btn_editSubmit"
+                        android:layout_width="174dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/roundedbutton"
+                        android:text="Submit"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
