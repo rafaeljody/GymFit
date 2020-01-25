@@ -25,11 +25,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="355dp">
 
-                <LinearLayout
-                    android:id="@+id/llFotoGym"
-                    android:orientation="horizontal"
+                <ImageView
+                    android:id="@+id/imgGym"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"/>
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/gedung" />
 
 
                 <FrameLayout
@@ -140,6 +141,23 @@
                 android:clipToPadding="false"
                 android:paddingLeft="10dp"></androidx.recyclerview.widget.RecyclerView>
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="36dp"
+                android:text="Personal Trainer"
+                android:textColor="#252527"
+                android:textSize="16.8sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvTrainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -151,7 +169,7 @@
                 android:textSize="16.8sp" />
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvTrainer"
+                android:id="@+id/rvByTrainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
