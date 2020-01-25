@@ -26,9 +26,10 @@
                 android:layout_height="355dp">
 
                 <LinearLayout
+                    android:id="@+id/llFotoGym"
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"
-                    android:background="@drawable/gedung" />
+                    android:layout_height="220dp"/>
 
 
                 <FrameLayout
@@ -72,6 +73,7 @@
                                     android:orientation="vertical">
 
                                     <TextView
+                                        android:id="@+id/tvNamaGym"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
@@ -81,19 +83,21 @@
                                         android:textSize="18.5sp" />
 
                                     <TextView
+                                        android:id="@+id/tvAlamat"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
-                                        android:text="No Telepon"
+                                        android:text="Alamat Gym"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
 
                                     <TextView
+                                        android:id="@+id/tvNoTelp"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="14dp"
-                                        android:text="Alamat Gym"
+                                        android:text="No Telepon"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
 
@@ -123,14 +127,14 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Alat dan Fasilitas"
+                    android:text="Paket Membership"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
             </LinearLayout>
 
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvAlat"
+                android:id="@+id/rvPaket"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:clipToPadding="false"
@@ -142,7 +146,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginTop="36dp"
-                android:text="Trainer"
+                android:text="Biaya Personal Trainer"
                 android:textColor="#252527"
                 android:textSize="16.8sp" />
 
@@ -155,7 +159,92 @@
             </androidx.recyclerview.widget.RecyclerView>
 
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="36dp"
+                android:text="Fasilitas Gym"
+                android:textColor="#252527"
+                android:textSize="16.8sp" />
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvFasilitas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="36dp"
+                android:text="Kelas"
+                android:textColor="#252527"
+                android:textSize="16.8sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvKelas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="36dp"
+                android:text="Peralatan Kebugaran"
+                android:textColor="#252527"
+                android:textSize="16.8sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPeralatan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="36dp"
+                android:text="Gym Machine"
+                android:textColor="#252527"
+                android:textSize="16.8sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvGymMachine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:paddingLeft="10dp">
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="36dp"
+                android:text="Keunggulan Gym"
+                android:textColor="#252527"
+                android:textSize="16.8sp" />
+
+            <TextView
+                android:id="@+id/tvKeunggulan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="nampilin Keunggulan Gym"
+                android:textColor="#252527"
+                android:textSize="16.8sp" />
 
         </LinearLayout>
 
