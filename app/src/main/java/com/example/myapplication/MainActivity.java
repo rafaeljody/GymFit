@@ -8,6 +8,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -104,8 +105,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cpp(){
-        Intent intent = new Intent(MainActivity.this, CpActivity.class);
-        startActivity(intent);
+        Uri uri = Uri.parse("smsto:" + "6285643377456");
+        Intent i = new Intent(Intent.ACTION_SENDTO, uri);
+        i.setPackage("com.whatsapp");
+        startActivity(Intent.createChooser(i, ""));
     }
 
     @Override
