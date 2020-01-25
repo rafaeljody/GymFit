@@ -8,10 +8,13 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -105,10 +108,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cpp(){
-        Uri uri = Uri.parse("smsto:" + "6285643377456");
-        Intent i = new Intent(Intent.ACTION_SENDTO, uri);
-        i.setPackage("com.whatsapp");
-        startActivity(Intent.createChooser(i, ""));
+        try {
+            String text = "Terimakasih telah menggunakan GYM FIT, silakan bertanya:././";// Replace with your message.
+
+            String toNumber = "6285643377456"; // Replace with mobile phone number without +Sign or leading zeros, but with country code
+            //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
+
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+toNumber +"&text="+text));
+            startActivity(intent);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -136,7 +149,19 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void cp(View view){
-        Intent intent = new Intent(MainActivity.this, CpActivity.class);
-        startActivity(intent);
+        try {
+            String text = "Terimakasih telah menggunakan GYM FIT, silakan bertanya: \n\n";// Replace with your message.
+
+            String toNumber = "6285643377456"; // Replace with mobile phone number without +Sign or leading zeros, but with country code
+            //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
+
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+toNumber +"&text="+text));
+            startActivity(intent);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
