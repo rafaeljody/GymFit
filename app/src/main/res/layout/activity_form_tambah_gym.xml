@@ -245,68 +245,16 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <CheckBox
-                            android:id="@+id/cb_FstAc"
+                        <EditText
+                            android:id="@+id/edt_Fasilitas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="AC"/>
+                            android:layout_margin="5dp"
+                            android:hint="Tuliskan fasilitas-fasilitas yang terdapat dalam Gym Anda"
+                            android:inputType="textMultiLine" />
 
-                        <CheckBox
-                            android:id="@+id/cb_FstKipas"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Kipas"/>
 
-                        <CheckBox
-                            android:id="@+id/cb_FstHanduk"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Handuk"/>
 
-                        <CheckBox
-                            android:id="@+id/cb_FstAirMinum"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Air Minum"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_FstKamarMandi"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Kamar Mandi"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_FstLoker"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Ruang Loker"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_FstSauna"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Sauna"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_FstWifi"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Wifi"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_FstKolam"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Kolam Renang"/>
 
                     </LinearLayout>
 
@@ -326,117 +274,14 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <CheckBox
-                            android:id="@+id/cb_KlsAerobik"
+                        <EditText
+                            android:id="@+id/edt_Kelas"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Aerobik"/>
+                            android:layout_margin="5dp"
+                            android:hint="Tuliskan kelas-kelas yang terdapat dalam Gym Anda (Aerobik,Zumba,dll)"
+                            android:inputType="textMultiLine" />
 
-                        <CheckBox
-                            android:id="@+id/cb_KlsUrbanDance"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Urban Dance"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsZumba"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Zumba"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsStrByZumba"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Strong by Zumba"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsYoga"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Yoga"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsPilates"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Pilates"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsTRX"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="TRX"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsMuayThai"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Muay-Thai"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsTBS"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Total Body Shaping"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsTaktis"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Taktis"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsSSW"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Sport Specific Workout"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsKalistenik"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="kalistenik"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsKattlebell"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Kattlebell"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsCF"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Cross Fit"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsRenang"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Renang"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_KlsBscFitness"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Basic Firness"/>
 
 
                     </LinearLayout>
@@ -456,68 +301,13 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <CheckBox
-                            android:id="@+id/cb_PkTreadmill"
+                        <EditText
+                            android:id="@+id/edt_Peralatan"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Treadmill"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkSepedaStatis"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Sepeda Statis"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkCrossTrainer"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="CrossTrainer"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkDumleSet"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="DumbleSet"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkKattlebell"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Kattlebell"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkGymBall"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Gym Ball"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkBosu"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Bosu"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkTrx"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="TRX"/>
-
-                        <CheckBox
-                            android:id="@+id/cb_PkBallGymMdcn"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginLeft="5dp"
-                            android:hint="Ball Gym Medicine"/>
+                            android:layout_margin="5dp"
+                            android:hint="Tuliskan Peralatan-peralatan yang terdapat dalam Gym Anda (Treadmill,Gym Ball,dll)"
+                            android:inputType="textMultiLine" />
 
 
                     </LinearLayout>
@@ -546,7 +336,7 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <include layout="@layout/activity_content_foto_mesin" />
+                        <include layout="@layout/activity_content_foto_profil_trainer" />
 
                         <Button
                             android:id="@+id/btn_UploadTrainer"
