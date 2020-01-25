@@ -4,13 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.squareup.picasso.Picasso;
 
 public class trainer extends AppCompatActivity {
     private RecyclerView mTrainerList;
@@ -21,7 +24,7 @@ public class trainer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trainer);
 
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("DATA TRAINER");
+        mDatabase= FirebaseDatabase.getInstance().getReference().child("DATA TRAINER TEST");
         mDatabase.keepSynced(true);
 
         mTrainerList=(RecyclerView)findViewById(R.id.rv_main);
@@ -38,6 +41,7 @@ public class trainer extends AppCompatActivity {
             protected void populateViewHolder(trainer.TrainerViewHolder trainerViewHolder, personalTrainer pt, int i) {
                 trainerViewHolder.setTrainer(pt.getNama_trainer());
                 trainerViewHolder.setSpesialisasi(pt.getKeahlian());
+                trainerViewHolder.setImage(getApplicationContext(),pt.getImgUrl());
             }
         };
 
@@ -59,6 +63,10 @@ public class trainer extends AppCompatActivity {
         public void setSpesialisasi(String spe){
             TextView postKeahlian=(TextView)mView.findViewById(R.id.tvSpesialisasi);
             postKeahlian.setText(spe);
+        }
+        public void setImage(Context ctx, String image){
+            ImageView postImage=(ImageView)mView.findViewById(R.id.imgTrainer);
+            Picasso.get().load(image).into(postImage);
         }
     }
 }

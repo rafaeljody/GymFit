@@ -10,11 +10,11 @@ public class personalTrainer implements Serializable {
     String nama_trainer,pendidikan_formal, gym_home, on_call_area,
             nomor_telp, akun_sosmed, pengalaman_kerja, tarif_pertemuan, sertifikasi, keahlian;
 
-
+    private String imgUrl;
     public personalTrainer() {
     }
 
-    public personalTrainer(String nama_trainer, String pendidikan_formal, String gym_home, String on_call_area, String nomor_telp, String akun_sosmed, String pengalaman_kerja, String tarif_pertemuan, String sertifikasi, String keahlian) {
+    public personalTrainer(String nama_trainer, String pendidikan_formal, String gym_home, String on_call_area, String nomor_telp, String akun_sosmed, String pengalaman_kerja, String tarif_pertemuan, String sertifikasi, String keahlian,String imgUrl) {
         this.nama_trainer = nama_trainer;
         this.pendidikan_formal = pendidikan_formal;
         this.gym_home = gym_home;
@@ -25,6 +25,7 @@ public class personalTrainer implements Serializable {
         this.tarif_pertemuan = tarif_pertemuan;
         this.sertifikasi = sertifikasi;
         this.keahlian = keahlian;
+        this.imgUrl = imgUrl;
     }
 
     public String getNama_trainer() {
@@ -107,6 +108,14 @@ public class personalTrainer implements Serializable {
         this.keahlian = keahlian;
     }
 
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
     @Override
     public String toString() {
         return "personalTrainer{" +
@@ -120,6 +129,7 @@ public class personalTrainer implements Serializable {
                 ", tarif_pertemuan='" + tarif_pertemuan + '\'' +
                 ", sertifikasi='" + sertifikasi + '\'' +
                 ", keahlian='" + keahlian + '\'' +
+                ", imgurl='" + imgUrl +'\'' +
                 '}';
     }
 }

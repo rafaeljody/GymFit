@@ -59,9 +59,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
         etTemu15        = (EditText) findViewById(R.id.edt_byLimabelsPert);
         etTemu20        = (EditText) findViewById(R.id.edt_byDuapulPert);
 
-        etFasilitas     = (EditText) findViewById(R.id.edt_Fasilitas);
-        etKelas         = (EditText) findViewById(R.id.edt_Kelas);
-        etPeralatan     = (EditText) findViewById(R.id.edt_Peralatan);
         etKeunggulan    = (EditText) findViewById(R.id.edt_Keunggulan);
 
         //inisialisasi Button Submit dan Upload
@@ -84,9 +81,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
                         etBiaya3.getText().toString(),etBiaya6.getText().toString(),
                         etPerpanjangan.getText().toString(),etTemu5.getText().toString(),
                         etTemu10.getText().toString(),etTemu15.getText().toString(),
-                        etTemu20.getText().toString(),
-                        etFasilitas.getText().toString(), etKelas.getText().toString(),
-                        etPeralatan.getText().toString(),etKeunggulan.getText().toString()));
+                        etTemu20.getText().toString()));
 
             }
         });

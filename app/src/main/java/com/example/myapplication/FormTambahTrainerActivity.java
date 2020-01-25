@@ -18,6 +18,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -25,8 +26,10 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 public class FormTambahTrainerActivity extends AppCompatActivity {
+
 
     Button ch,up;
     ImageView img;
@@ -48,7 +51,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_tambah_trainer);
 
-        mStorageReference= FirebaseStorage.getInstance().getReference("profile_trainer");
+        mStorageReference= FirebaseStorage.getInstance().getReference("DATA TRAINER TEST");
 
         // inisialisasi button submit dan upload
         btSubmit        = (Button) findViewById(R.id.btn_submit);
@@ -88,18 +91,9 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                     Toast.makeText(FormTambahTrainerActivity.this, "upload in progress",Toast.LENGTH_LONG).show();
                 }else{
                     FileUploader();
+
                 }
-                personalTrainer(new personalTrainer(
-                        etNamaTrainer.getText().toString(),
-                        etPendidikan.getText().toString(),
-                        etGym.getText().toString(),
-                        etOn.getText().toString(),
-                        etTelepon.getText().toString(),
-                        etSosmed.getText().toString(),
-                        etPengalaman.getText().toString(),
-                        etTarif.getText().toString(),
-                        etSertifikasi.getText().toString(),
-                        etAhli.getText().toString()));
+
             }
         });
 
@@ -112,15 +106,30 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
     }
 
     private void FileUploader(){
-        StorageReference ref=mStorageReference.child(System.currentTimeMillis()+"."+getExtension(imguri));
-
+        final StorageReference ref=mStorageReference.child(System.currentTimeMillis()+"."+getExtension(imguri));
         uploadTask= ref.putFile(imguri)
                 .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                     @Override
                     public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                         // Get a URL to the uploaded content
-                        //Uri downloadUrl = taskSnapshot.getDownloadUrl();
                         Toast.makeText(FormTambahTrainerActivity.this, "image uploaded succesfully",Toast.LENGTH_LONG).show();
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                personalTrainer(new personalTrainer(
+                                        etNamaTrainer.getText().toString(),
+                                        etPendidikan.getText().toString(),
+                                        etGym.getText().toString(),
+                                        etOn.getText().toString(),
+                                        etTelepon.getText().toString(),
+                                        etSosmed.getText().toString(),
+                                        etPengalaman.getText().toString(),
+                                        etTarif.getText().toString(),
+                                        etSertifikasi.getText().toString(),
+                                        etAhli.getText().toString(),
+                                        uri.toString()));
+                            }
+                        });
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -145,8 +154,9 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode==1 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
-            imguri=data.getData();
+           imguri=data.getData();
             img.setImageURI(imguri);
+
         }
     }
 
