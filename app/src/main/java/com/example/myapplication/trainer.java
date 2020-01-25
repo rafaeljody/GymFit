@@ -1,11 +1,15 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
-public class trainer extends AppCompatActivity {
+import com.google.firebase.database.DatabaseReference;
 
+public class trainer extends AppCompatActivity {
+    private RecyclerView mGymList;
+    private DatabaseReference mDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
