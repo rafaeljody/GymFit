@@ -51,7 +51,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_tambah_trainer);
 
-        mStorageReference= FirebaseStorage.getInstance().getReference("DATA TRAINER TEST");
+        mStorageReference= FirebaseStorage.getInstance().getReference("DATA TRAINER");
 
         // inisialisasi button submit dan upload
         btSubmit        = (Button) findViewById(R.id.btn_submit);
@@ -161,7 +161,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
     }
 
     public void personalTrainer(personalTrainer personal_trainer){
-        database.child("DATA TRAINER TEST").push().setValue(personal_trainer).addOnSuccessListener(this,
+        database.child("DATA TRAINER").push().setValue(personal_trainer).addOnSuccessListener(this,
                 new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

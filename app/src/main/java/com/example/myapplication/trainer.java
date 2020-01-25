@@ -24,7 +24,7 @@ public class trainer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trainer);
 
-        mDatabase= FirebaseDatabase.getInstance().getReference().child("DATA TRAINER TEST");
+        mDatabase= FirebaseDatabase.getInstance().getReference().child("DATA TRAINER");
         mDatabase.keepSynced(true);
 
         mTrainerList=(RecyclerView)findViewById(R.id.rv_main);
