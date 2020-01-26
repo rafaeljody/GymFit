@@ -91,19 +91,34 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <include
-                            android:id="@+id/ch_profile"
-                            layout="@layout/activity_content_foto_profil_gym" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="5dp"
+                            android:gravity="center_horizontal"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                        <Button
-                            android:id="@+id/btn_UploadGym"
-                            android:layout_width="174dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="16dp"
-                            android:background="@drawable/roundedbutton"
-                            android:text="Upload Foto Profil"
-                            android:textColor="@android:color/white" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pilih Gambar"
+                                android:id="@+id/buttonChoose"
+                                android:drawableRight="@android:drawable/ic_menu_gallery"/>
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="200dp"
+                                android:layout_height="200dp"
+                                android:layout_weight="1"
+                                android:scaleType="centerCrop" />
+
+                        </LinearLayout>
+
+
 
                     </LinearLayout>
 
@@ -338,17 +353,38 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <include layout="@layout/activity_content_foto_profil_trainer" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="5dp"
+                            android:gravity="center_horizontal"
+                            app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-                        <Button
-                            android:id="@+id/btn_UploadTrainer"
-                            android:layout_width="174dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="16dp"
-                            android:background="@drawable/roundedbutton"
-                            android:text="Upload Foto Trainer"
-                            android:textColor="@android:color/white" />
+                            <Button
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pilih Gambar"
+                                android:id="@+id/buttonChoose2"
+                                android:drawableRight="@android:drawable/ic_menu_gallery"/>
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/imageView2" />
+
+                            <EditText
+                                android:id="@+id/editText"
+                                android:hint="Masukkan Nama Trainer"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
 
                     </LinearLayout>
 
@@ -368,26 +404,7 @@
                         android:orientation="vertical"
                         android:layout_marginTop="30dp">
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="left"
-                            android:layout_marginLeft="5dp"
-                            android:text="FOTO GYM MACHINE"
-                            android:textStyle="bold"
-                            android:textSize="15sp" />
 
-                        <include layout="@layout/activity_content_foto_mesin" />
-
-                        <Button
-                            android:id="@+id/btn_UploadMesin"
-                            android:layout_width="174dp"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:layout_margin="16dp"
-                            android:background="@drawable/roundedbutton"
-                            android:text="Upload Foto Gym Machine"
-                            android:textColor="@android:color/white" />
 
                     </LinearLayout>
 
