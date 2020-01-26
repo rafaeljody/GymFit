@@ -1,18 +1,24 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.ContentResolver;
 import android.content.Intent;
 import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.MimeTypeMap;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
@@ -22,12 +28,14 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.StorageTask;
+import com.google.firebase.storage.UploadTask;
 
 public class FormTambahGymActivity extends AppCompatActivity {
 
     DatabaseReference database; // untuk mengambil root pada database
 
-
+    Button ch,ch2;
+    ImageView img2;
 
     EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
     EditText etPendaftar, etInsidental, etBiaya1, etBiaya2, etBiaya3, etBiaya6, etPerpanjangan; // Paket Membership
@@ -35,11 +43,12 @@ public class FormTambahGymActivity extends AppCompatActivity {
     EditText etFasilitas, etKelas, etPeralatan, etKeunggulan;
 
 
-    Button btUpload,btSubmitDB,btUploadMesin; //button upload dan submit
+    Button btUpload,btSubmitDB,btUploadMesin;
     ImageView img;
-    StorageReference mStorageReference;
-    public Uri imguri;
-    private StorageTask uploadTask;
+    StorageReference mStorageReference,mStorageReference2;
+    public Uri imguri,imguri2;
+    public String temp1,temp2;
+    private StorageTask uploadTask,uploadTask2;
 
 
     @Override
@@ -47,8 +56,29 @@ public class FormTambahGymActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_tambah_gym);
 
-        mStorageReference = FirebaseStorage.getInstance().getReference("DATA TRAINER");
-        mStorageReference = FirebaseStorage.getInstance().getReference("");
+        mStorageReference = FirebaseStorage.getInstance().getReference("DATA GYM");
+        mStorageReference2 = FirebaseStorage.getInstance().getReference("DATA GYM TRAINER");
+
+        ch=(Button)findViewById(R.id.buttonChoose);
+        img=(ImageView)findViewById(R.id.imageView);
+        ch2=(Button)findViewById(R.id.buttonChoose2);
+        img2=(ImageView)findViewById(R.id.imageView2);
+
+        ch.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Filechoser();
+            }
+        }
+        );
+
+        ch2.setOnClickListener(new View.OnClickListener(){
+                                  @Override
+                                  public void onClick(View view){
+                                      Filechoser2();
+                                  }
+                              }
+        );
 
         //inisialisasi Detail GYM
         etNamaGym       = (EditText) findViewById(R.id.edt_NamaGym);
@@ -74,36 +104,153 @@ public class FormTambahGymActivity extends AppCompatActivity {
 
         //inisialisasi Button Submit dan Upload
         btSubmitDB      = (Button) findViewById(R.id.btn_submit);
-        btUpload        = (Button) findViewById(R.id.btn_UploadGym);
-        btUploadMesin   = (Button) findViewById(R.id.btn_UploadMesin);
 
         // Inisialisasi Fireb,ase
         database = FirebaseDatabase.getInstance().getReference();
 
         //Onclick pada Button Submit
+//        btSubmitDB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                submitData(new Data(
+//                        etNamaGym.getText().toString(),
+//                        etAlamatGym.getText().toString(),
+//                        etNomorHP.getText().toString(),
+//                        etPendaftar.getText().toString(),
+//                        etInsidental.getText().toString(),
+//                        etBiaya1.getText().toString(),
+//                        etBiaya2.getText().toString(),
+//                        etBiaya3.getText().toString(),
+//                        etBiaya6.getText().toString(),
+//                        etPerpanjangan.getText().toString(),
+//                        etTemu5.getText().toString(),
+//                        etTemu10.getText().toString(),
+//                        etTemu15.getText().toString(),
+//                        etTemu20.getText().toString(),
+//                        imguri.toString()));
+//            }
+//        });
+
         btSubmitDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                submitData(new Data(
-                        etNamaGym.getText().toString(),
-                        etAlamatGym.getText().toString(),
-                        etNomorHP.getText().toString(),
-                        etPendaftar.getText().toString(),
-                        etInsidental.getText().toString(),
-                        etBiaya1.getText().toString(),
-                        etBiaya2.getText().toString(),
-                        etBiaya3.getText().toString(),
-                        etBiaya6.getText().toString(),
-                        etPerpanjangan.getText().toString(),
-                        etTemu5.getText().toString(),
-                        etTemu10.getText().toString(),
-                        etTemu15.getText().toString(),
-                        etTemu20.getText().toString(),
-                        imguri.toString()));
+                if(uploadTask!=null && uploadTask.isInProgress()){
+                    Toast.makeText(FormTambahGymActivity.this, "upload in progress",Toast.LENGTH_LONG).show();
+                }else{
+                    FileUploader();
+                    FileUploader2();
+                    MasukData();
+                }
+
             }
         });
 
     }
+    private String getExtension(Uri uri){
+        ContentResolver cr=getContentResolver();
+        MimeTypeMap mimeTypeMap=MimeTypeMap.getSingleton();
+        return mimeTypeMap.getExtensionFromMimeType(cr.getType(uri));
+    }
+
+
+    private void FileUploader(){
+        final StorageReference ref=mStorageReference.child(System.currentTimeMillis()+"."+getExtension(imguri));
+        uploadTask= ref.putFile(imguri)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // Get a URL to the uploaded content
+                        Toast.makeText(FormTambahGymActivity.this, "image uploaded succesfully",Toast.LENGTH_LONG).show();
+                        ref.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                    temp1=uri.toString();
+                            }
+                        });
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle unsuccessful uploads
+                        // ...
+                    }
+                });
+    }
+
+    private void FileUploader2(){
+        final StorageReference ref2=mStorageReference2.child(System.currentTimeMillis()+"."+getExtension(imguri2));
+        uploadTask2= ref2.putFile(imguri2)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // Get a URL to the uploaded content
+                        Toast.makeText(FormTambahGymActivity.this, "image uploaded succesfully",Toast.LENGTH_LONG).show();
+                        ref2.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
+                            @Override
+                            public void onSuccess(Uri uri) {
+                                temp2=uri.toString();
+                            }
+                        });
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle unsuccessful uploads
+                        // ...
+                    }
+                });
+    }
+
+    private void Filechoser(){
+        Intent intent=new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityIfNeeded(intent, 1);
+    }
+    private void Filechoser2(){
+        Intent intent=new Intent();
+        intent.setType("image/*");
+        intent.setAction(Intent.ACTION_GET_CONTENT);
+        startActivityIfNeeded(intent, 2);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode==1 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
+            imguri=data.getData();
+            img.setImageURI(imguri);
+
+        }
+        if(requestCode==2 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
+            imguri2=data.getData();
+            img2.setImageURI(imguri2);
+
+        }
+    }
+
+    public void MasukData(){
+        submitData(new Data(
+                etNamaGym.getText().toString(),
+                etAlamatGym.getText().toString(),
+                etNomorHP.getText().toString(),
+                etPendaftar.getText().toString(),
+                etInsidental.getText().toString(),
+                etBiaya1.getText().toString(),
+                etBiaya2.getText().toString(),
+                etBiaya3.getText().toString(),
+                etBiaya6.getText().toString(),
+                etPerpanjangan.getText().toString(),
+                etTemu5.getText().toString(),
+                etTemu10.getText().toString(),
+                etTemu15.getText().toString(),
+                etTemu20.getText().toString(),
+                temp1,
+                temp2));
+    }
+
 
     public void submitData (Data data){
         database.child("Detail-GYM").push().setValue(data).addOnSuccessListener(this, new OnSuccessListener<Void>() {
@@ -130,10 +277,10 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 etTemu15.setText("");
                 etTemu20.setText("");
 
-                etFasilitas.setText("");
-                etKelas.setText("");
-                etPeralatan.setText("");
-                etKeunggulan.setText("");
+                //etFasilitas.setText("");
+//                etKelas.setText("");
+  //              etPeralatan.setText("");
+    //            etKeunggulan.setText("");
 
 
 
