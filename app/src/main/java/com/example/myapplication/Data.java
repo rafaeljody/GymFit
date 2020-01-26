@@ -30,6 +30,8 @@ public class Data implements Serializable {
 
     private String namaTrainerGym;
 
+    private String fasilitas,kelas, peralatan, personal_trainer, keunggulan;
+
     private String imgUrl;
     private String imgUrlTrainer;
 

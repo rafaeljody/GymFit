@@ -82,6 +82,7 @@ public class gym extends AppCompatActivity {
                         i.putExtra("alamatgym", data.getAlamatGym());
                         i.putExtra("teleponGym",data.getTeleponGym());
                         i.putExtra("img_gym",data.getImgUrl());
+
                         i.putExtra("pendaftaranMb",data.getBiaya_pendaftaran());
                         i.putExtra("biaya_satu",data.getBiaya_satuBulan());
                         i.putExtra("biaya_dua",data.getBiaya_duaBulan());
@@ -89,6 +90,16 @@ public class gym extends AppCompatActivity {
                         i.putExtra("biaya_enam",data.getEnamBulan());
                         i.putExtra("insidentalMb",data.getBiaya_insindental());
                         i.putExtra("perpanjangan",data.getBiayaPerpanjangan());
+
+                        i.putExtra("temu5",data.getBiaya_5Pertemuan());
+                        i.putExtra("temu10",data.getBiaya_10Pertemuan());
+                        i.putExtra("temu15",data.getBiaya_15Pertemuan());
+                        i.putExtra("temu20",data.getBiaya_20Pertemuan());
+
+//                        i.putExtra("fasilitas_gym",data.getFasilitas());
+////                        i.putExtra("kelas_gym",data.getKelas());
+////                        i.putExtra("peralatan_gym",data.getPeralatan());
+////                        i.putExtra("keunguulan_gym",data.getKeunggulan());
 
                         startActivity(i);
                     }
