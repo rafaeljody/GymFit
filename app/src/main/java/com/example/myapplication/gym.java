@@ -96,11 +96,12 @@ public class gym extends AppCompatActivity {
                         i.putExtra("temu15",data.getBiaya_15Pertemuan());
                         i.putExtra("temu20",data.getBiaya_20Pertemuan());
 
-//                        i.putExtra("fasilitas_gym",data.getFasilitas());
-////                        i.putExtra("kelas_gym",data.getKelas());
-////                        i.putExtra("peralatan_gym",data.getPeralatan());
-////                        i.putExtra("keunguulan_gym",data.getKeunggulan());
-
+                        i.putExtra("fasilitas_gym",data.getFasilitas());
+                        i.putExtra("kelas_gym",data.getKelas());
+                        i.putExtra("peralatan_gym",data.getPeralatan());
+                        i.putExtra("keunguulan_gym",data.getKeunggulan());
+                        i.putExtra("gym_machine",data.getGymmachine());
+                        i.putExtra("keunggulan_gym",data.getKeunggulan());
                         startActivity(i);
                     }
                 });
