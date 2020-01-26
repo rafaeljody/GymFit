@@ -81,6 +81,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="30dp"
+                                        android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Nama Lengkap"
                                         android:textColor="#4f4f4f"
                                         android:textSize="18.5sp" />
@@ -90,6 +91,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
+                                        android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Nama Akun Sosmed"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
@@ -99,6 +101,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
+                                        android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Home Base"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
@@ -109,6 +112,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="14dp"
+                                        android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Nomor Telephone"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
@@ -160,6 +164,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Pendidikan"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -179,6 +184,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Pendidikan dari Database"
                     android:textSize="16.8sp" />
 
@@ -197,6 +203,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="On Call Area"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -216,6 +223,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin On Call Area Dari Database"
                     android:textSize="16.8sp" />
 
@@ -234,6 +242,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Pengalaman Kerja"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -253,6 +262,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Pengalaman Kerja Dari Database"
                     android:textSize="16.8sp" />
 
@@ -272,6 +282,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Sertifikasi"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -290,6 +301,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Sertifikasi Dari Database"
                     android:textSize="16.8sp" />
 
@@ -310,6 +322,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Keahlian"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -328,6 +341,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Keahlian Dari Database"
                     android:textSize="16.8sp" />
 
@@ -346,6 +360,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Tarif Pertemuan (/bulan)"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -364,6 +379,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Tarif Pertemuan Dari Database"
                     android:textSize="16.8sp" />
 

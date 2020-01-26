@@ -85,6 +85,7 @@ public class AdminActivity extends AppCompatActivity {
 
     public void logout(){
         Intent intent = new Intent(AdminActivity.this, MainActivity.class);
+
         startActivity(intent);
     }
     public void about(){

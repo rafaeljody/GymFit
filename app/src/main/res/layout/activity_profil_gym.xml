@@ -79,6 +79,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="15dp"
+                                        android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Nama Gym"
                                         android:textColor="#4f4f4f"
                                         android:textSize="18.5sp" />
@@ -88,6 +89,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
+                                        android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Alamat Gym"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
@@ -98,6 +100,7 @@
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="14dp"
+                                        android:fontFamily="sans-serif-condensed-medium"
                                         android:text="No Telepon"
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
@@ -128,6 +131,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Paket Membership"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -147,6 +151,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Paket Membership"
                     android:textSize="16.8sp" />
 
@@ -165,6 +170,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Paket satu bulan"
                     android:textSize="16.8sp" />
 
@@ -182,6 +188,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Paket dua bulan"
                     android:textSize="16.8sp" />
 
@@ -200,6 +207,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Paket tiga bulan"
                     android:textSize="16.8sp" />
 
@@ -218,6 +226,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Paket enam bulan"
                     android:textSize="16.8sp" />
 
@@ -236,6 +245,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="biaya Insidental"
                     android:textSize="16.8sp" />
 
@@ -253,6 +263,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Biaya Perpanjangan Membership"
                     android:textSize="16.8sp" />
 
@@ -273,6 +284,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Personal Trainer"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -291,6 +303,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Personal Trainer"
                     android:textSize="16.8sp" />
 
@@ -312,6 +325,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Biaya Personal Trainer"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -332,6 +346,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="5x Pertemuan"
                     android:textSize="16.8sp" />
 
@@ -350,6 +365,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="10x Pertemuan"
                     android:textSize="16.8sp" />
 
@@ -367,6 +383,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="15x Pertemuan"
                     android:textSize="16.8sp" />
 
@@ -385,6 +402,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="20x Pertemuan"
                     android:textSize="16.8sp" />
 
@@ -404,6 +422,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Fasilitas Gym"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -423,6 +442,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Paket Membership"
                     android:textSize="16.8sp" />
 
@@ -442,6 +462,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Kelas"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -461,6 +482,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Paket Membership"
                     android:textSize="16.8sp" />
 
@@ -479,6 +501,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Peralatan Kebugaran"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -498,7 +521,8 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Nampilin Paket Membership"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nampilin Peralatan Kebugaran"
                     android:textSize="16.8sp" />
 
 
@@ -516,6 +540,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Gym Machine"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -535,6 +560,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Gym Machine"
                     android:textSize="16.8sp" />
 
@@ -553,6 +579,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Keunggulan Gym"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
@@ -572,6 +599,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
                     android:text="Nampilin Paket Membership"
                     android:textSize="16.8sp" />
 
