@@ -10,14 +10,13 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvGym"
-        android:clickable="true"
-        android:onClick="informasigym"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="8dp"
         android:layout_marginLeft="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
         app:cardCornerRadius="16dp"
         card_view:cardElevation="4dp"
         card_view:cardMaxElevation="6dp">
@@ -25,8 +24,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginRight="32dp"
             android:layout_marginLeft="32dp"
+            android:layout_marginRight="32dp"
             android:orientation="vertical">
 
             <LinearLayout
@@ -40,8 +39,8 @@
                     android:id="@+id/imgGym"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_gravity="center_vertical" />
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="16dp" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -50,22 +49,22 @@
                     android:layout_marginTop="3dp"
                     android:layout_marginBottom="3dp"
                     android:gravity="center_vertical"
-                    android:orientation="vertical" >
+                    android:orientation="vertical">
 
                     <TextView
                         android:id="@+id/tvNama"
-                        android:text="nama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:text="nama"
                         android:textColor="@color/colorAccent"
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/tvAlamat"
-                        android:text="alamat"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content" />
+                        android:layout_height="wrap_content"
+                        android:text="alamat" />
 
                     <LinearLayout
                         android:layout_width="wrap_content"
@@ -76,7 +75,7 @@
 
                     </LinearLayout>
 
-            </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>

@@ -18,6 +18,7 @@ import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -93,12 +94,9 @@ public class trainer extends AppCompatActivity {
                 return new TrainerViewHolder(LayoutInflater.from(trainer.this).inflate(R.layout.daftar_trainer,parent,false));
             }
         };
-
-
         recyclerView.setAdapter(adapter );
     }
-
-
+}
 
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
@@ -159,6 +157,3 @@ public class trainer extends AppCompatActivity {
 //            Picasso.get().load(image).into(postImage);
 //        }
 //    }
-
-
-}

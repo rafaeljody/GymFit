@@ -58,7 +58,6 @@ public class gym extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gym);
 
-
         arrayList = new ArrayList<Data>();
 
         mGymList=(RecyclerView)findViewById(R.id.rv_main);
@@ -70,42 +69,32 @@ public class gym extends AppCompatActivity {
         options = new FirebaseRecyclerOptions.Builder<Data>().setQuery(mDatabase,Data.class).build();
         adapter = new FirebaseRecyclerAdapter<Data, GymViewHolder>(options){
             @Override
-            protected void onBindViewHolder(@NonNull GymViewHolder gymViewHolder, int i, @NonNull final Data Data){
-                PicassoGym.downloadImage(c,Data.getImgUrl(), gymViewHolder.img);
-                gymViewHolder.nama.setText(Data.getNamaGym());
-                gymViewHolder.alamat.setText(Data.getAlamatGym());
+            protected void onBindViewHolder(@NonNull GymViewHolder gymViewHolder, int i, @NonNull final Data data){
+                PicassoGym.downloadImage(c,data.getImgUrl(), gymViewHolder.img);
+                gymViewHolder.nama_gym.setText(data.getNamaGym());
+                gymViewHolder.alamat_gym.setText(data.getAlamatGym());
                 gymViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        Intent i = new Intent(gym.this,profil_gym.class);
-                        i.putExtra("nama", Data.getNamaGym());
-                        i.putExtra("alamat",Data.getAlamatGym());
-                        i.putExtra("notelp",Data.getTeleponGym());
-                        i.putExtra("pendaftaran",Data.getBiaya_pendaftaran());
-                        i.putExtra("insidental",Data.getBiaya_insindental());
-                        i.putExtra("biaya_1",Data.getBiaya_satuBulan());
-                        i.putExtra("biaya_2",Data.getBiaya_duaBulan());
-                        i.putExtra("biaya_3",Data.getBiaya_tigaBulan());
-                        i.putExtra("biaya_6",Data.getEnamBulan());
-                        i.putExtra("biaya_perpanjangan",Data.getBiayaPerpanjangan());
-                        i.putExtra("img",Data.getImgUrl());
+                        Intent i = new Intent(gym.this, profil_gym.class);
+                        i.putExtra("nama_gym", data.getNamaGym());
+                        i.putExtra("alamat_gym", data.getAlamatGym());
                         startActivity(i);
+
                     }
                 });
-
-        }
-
-        @NonNull
-        @Override
-        public GymViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
+            }
+            @NonNull
+            @Override
+            public GymViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType){
                 return new GymViewHolder(LayoutInflater.from(gym.this).inflate(R.layout.daftar_gym,parent,false));
-        }
-    };
+            }
+        };
 
         mGymList.setAdapter(adapter);
 
-
     }
+}
 
 //    @Override
 //    protected void onStart() {
@@ -140,6 +129,3 @@ public class gym extends AppCompatActivity {
 //            postAlamat.setText(ala);
 //        }
 //    }
-
-
-}

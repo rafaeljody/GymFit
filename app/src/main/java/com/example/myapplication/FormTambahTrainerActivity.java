@@ -93,7 +93,6 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                     FileUploader();
 
                 }
-
             }
         });
 
@@ -175,7 +174,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                etSertifikasi.setText("");
                etAhli.setText("");
 
-                Snackbar.make(findViewById(R.id.btn_submit),"Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
+               Snackbar.make(findViewById(R.id.btn_submit),"Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
 
             }
         });
