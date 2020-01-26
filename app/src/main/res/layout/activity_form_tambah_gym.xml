@@ -443,10 +443,30 @@
                             android:hint="Masukkan Keunggulan Gym Anda"
                             android:inputType="textMultiLine" />
 
+                    </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="30dp">
 
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginLeft="5dp"
+                            android:text="GYM MACHINE"
+                            android:textStyle="bold"
+                            android:textSize="15sp" />
 
-
+                        <EditText
+                            android:id="@+id/edt_MachineGym"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:hint="Masukkan Gym Machine yang terdapat dalam gym Anda"
+                            android:inputType="textMultiLine" />
 
                     </LinearLayout>
 
