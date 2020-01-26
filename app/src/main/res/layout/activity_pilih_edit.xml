@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/C5"
-    tools:context=".PilihTambahActivity">
+    tools:context=".PilihEditActivity">
 
 
     <androidx.appcompat.widget.Toolbar
@@ -44,6 +44,7 @@
             android:layout_height="200dp"
             android:layout_margin="16dp"
             android:clickable="true"
+            android:onClick="gymi"
             card_view:cardCornerRadius="40dp"
             card_view:contentPadding="25dp"
             card_view:cardElevation="4dp"
@@ -73,6 +74,7 @@
             android:layout_height="200dp"
             android:layout_margin="16dp"
             android:clickable="true"
+            android:onClick="traineri"
             card_view:cardCornerRadius="40dp"
             card_view:contentPadding="25dp"
             card_view:cardElevation="4dp"
