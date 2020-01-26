@@ -126,8 +126,7 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                                         etPengalaman.getText().toString(),
                                         etTarif.getText().toString(),
                                         etSertifikasi.getText().toString(),
-                                        etAhli.getText().toString(),
-                                        uri.toString()));
+                                        etAhli.getText().toString(), uri.toString()));
                             }
                         });
                     }
