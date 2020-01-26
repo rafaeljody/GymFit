@@ -91,7 +91,9 @@
                             android:textStyle="bold"
                             android:textSize="15sp" />
 
-                        <include layout="@layout/activity_content_foto_profil_gym" />
+                        <include
+                            android:id="@+id/ch_profile"
+                            layout="@layout/activity_content_foto_profil_gym" />
 
                         <Button
                             android:id="@+id/btn_UploadGym"

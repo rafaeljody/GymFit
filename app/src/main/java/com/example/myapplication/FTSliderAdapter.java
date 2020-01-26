@@ -13,10 +13,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
+import com.example.myapplication.R;
+
 
 public class FTSliderAdapter extends PagerAdapter {
 
-    private int[] image_resource= {R.drawable.edu1,R.drawable.edu2,R.drawable.edu3,R.drawable.edu4,R.drawable.edu5};
+    public int[] image_resource= {R.drawable.edu1,R.drawable.edu2,R.drawable.edu3,R.drawable.edu4,R.drawable.edu5};
     Context context;
     LayoutInflater layoutInflater;
 

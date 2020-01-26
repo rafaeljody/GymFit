@@ -14,7 +14,7 @@ import android.widget.TextView;
 public class TipsActivity extends AppCompatActivity {
 
     private ViewPager mFaktaTipsPager;
-    private FTSliderAdapter ftSliderAdapter;
+    public FTSliderAdapter ftSliderAdapter;
     private TextView title;
 
     @Override

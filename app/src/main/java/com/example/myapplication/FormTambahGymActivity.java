@@ -4,11 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.ImageView;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.snackbar.Snackbar;
@@ -16,28 +19,36 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.StorageTask;
 
 public class FormTambahGymActivity extends AppCompatActivity {
 
     DatabaseReference database; // untuk mengambil root pada database
 
-    Button btUpload,btSubmitDB,btUploadMesin; //button upload dan submit
+
+
     EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
     EditText etPendaftar, etInsidental, etBiaya1, etBiaya2, etBiaya3, etBiaya6, etPerpanjangan; // Paket Membership
     EditText etTemu5, etTemu10, etTemu15, etTemu20; // Biaya Personal Trainer
     EditText etFasilitas, etKelas, etPeralatan, etKeunggulan;
 
-    //checkbox fasilitas Gym
-    CheckBox cb_ac,cb_kipas,cb_handuk, cb_Air, cb_kamar_mandi,
-    cb_ruangLoker, cb_sauna, cb_wifi, cb_kolamRenang;
 
-
+    Button btUpload,btSubmitDB,btUploadMesin; //button upload dan submit
+    ImageView img;
+    StorageReference mStorageReference;
+    public Uri imguri;
+    private StorageTask uploadTask;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_tambah_gym);
+
+        mStorageReference = FirebaseStorage.getInstance().getReference("DATA TRAINER");
+        mStorageReference = FirebaseStorage.getInstance().getReference("");
 
         //inisialisasi Detail GYM
         etNamaGym       = (EditText) findViewById(R.id.edt_NamaGym);
@@ -75,14 +86,20 @@ public class FormTambahGymActivity extends AppCompatActivity {
             public void onClick(View view) {
                 submitData(new Data(
                         etNamaGym.getText().toString(),
-                        etAlamatGym.getText().toString(),etNomorHP.getText().toString(),
-                        etPendaftar.getText().toString(),etInsidental.getText().toString(),
-                        etBiaya1.getText().toString(),etBiaya2.getText().toString(),
-                        etBiaya3.getText().toString(),etBiaya6.getText().toString(),
-                        etPerpanjangan.getText().toString(),etTemu5.getText().toString(),
-                        etTemu10.getText().toString(),etTemu15.getText().toString(),
-                        etTemu20.getText().toString()));
-
+                        etAlamatGym.getText().toString(),
+                        etNomorHP.getText().toString(),
+                        etPendaftar.getText().toString(),
+                        etInsidental.getText().toString(),
+                        etBiaya1.getText().toString(),
+                        etBiaya2.getText().toString(),
+                        etBiaya3.getText().toString(),
+                        etBiaya6.getText().toString(),
+                        etPerpanjangan.getText().toString(),
+                        etTemu5.getText().toString(),
+                        etTemu10.getText().toString(),
+                        etTemu15.getText().toString(),
+                        etTemu20.getText().toString(),
+                        imguri.toString()));
             }
         });
 
