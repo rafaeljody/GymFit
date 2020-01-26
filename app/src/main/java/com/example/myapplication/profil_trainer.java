@@ -2,12 +2,17 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.squareup.picasso.Picasso;
 
 public class profil_trainer extends AppCompatActivity {
 
     TextView tNama,tSpesial,tSosmed,tHomeBase,tPengalaman,tArea,tSertifikasi,tTarif,tNoTelp,tPendidikan;
+    ImageView tImg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +28,7 @@ public class profil_trainer extends AppCompatActivity {
         String tarif=getIntent().getStringExtra("tarif");
         String notelp=getIntent().getStringExtra("notelp");
         String pendidikan=getIntent().getStringExtra("pendidikan");
+        String img=getIntent().getStringExtra("img");
 
         tNama =(TextView)findViewById(R.id.tvNama);
         tSpesial =(TextView)findViewById(R.id.tvKeahlian);
@@ -34,6 +40,8 @@ public class profil_trainer extends AppCompatActivity {
         tTarif=(TextView)findViewById(R.id.tvTarif);
         tNoTelp=(TextView)findViewById(R.id.tvNoHp);
         tPendidikan=(TextView)findViewById(R.id.tvPendidikan);
+        tImg=(ImageView)findViewById(R.id.profileTrainer);
+
 
         tNama.setText(nama);
         tSpesial.setText(spesial);
@@ -45,5 +53,7 @@ public class profil_trainer extends AppCompatActivity {
         tTarif.setText(tarif);
         tNoTelp.setText(notelp);
         tPendidikan.setText(pendidikan);
+
+        Picasso.get().load(img).into(tImg);
     }
 }

@@ -32,6 +32,7 @@ public class trainer extends AppCompatActivity {
     private FirebaseRecyclerAdapter<personalTrainer,TrainerViewHolder> adapter;
     private DatabaseReference mDatabase;
     private Uri u;
+    private Context c;
 
     @Override
     protected void onStart() {
@@ -62,9 +63,9 @@ public class trainer extends AppCompatActivity {
         adapter = new FirebaseRecyclerAdapter<personalTrainer, TrainerViewHolder>(option) {
             @Override
             protected void onBindViewHolder(@NonNull TrainerViewHolder trainerViewHolder, int i, @NonNull final personalTrainer personalTrainer) {
+                PicassoTrainer.downloadImage(c,personalTrainer.getImgUrl(),trainerViewHolder.img);
                 trainerViewHolder.nama.setText(personalTrainer.getNama_trainer());
                 trainerViewHolder.splesialisasi.setText(personalTrainer.getKeahlian());
-
                 trainerViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -79,6 +80,7 @@ public class trainer extends AppCompatActivity {
                         i.putExtra("sertifikasi",personalTrainer.getSertifikasi());
                         i.putExtra("tarif",personalTrainer.getTarif_pertemuan());
                         i.putExtra("notelp",personalTrainer.getNomor_telp());
+                        i.putExtra("img",personalTrainer.getImgUrl());
                         startActivity(i);
                     }
                 });
