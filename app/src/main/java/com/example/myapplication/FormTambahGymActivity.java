@@ -74,8 +74,8 @@ public class FormTambahGymActivity extends AppCompatActivity {
 
         //inisialisasi Button Submit dan Upload
         btSubmitDB      = (Button) findViewById(R.id.btn_submit);
-//        btUpload        = (Button) findViewById(R.id.buttonChoose);
-//        btUploadMesin   = (Button) findViewById(R.id.btn_UploadMesin);
+        btUpload        = (Button) findViewById(R.id.btn_UploadGym);
+        btUploadMesin   = (Button) findViewById(R.id.btn_UploadMesin);
 
         // Inisialisasi Fireb,ase
         database = FirebaseDatabase.getInstance().getReference();
@@ -134,6 +134,8 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 etKelas.setText("");
                 etPeralatan.setText("");
                 etKeunggulan.setText("");
+
+
 
                 Snackbar.make(findViewById(R.id.btn_submit),"Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
             }
