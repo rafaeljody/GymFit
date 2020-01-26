@@ -10,8 +10,6 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvTrainer"
-        android:clickable="true"
-        android:onClick="informasitrainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"

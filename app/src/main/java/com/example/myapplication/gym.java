@@ -39,39 +39,39 @@ public class gym extends AppCompatActivity {
 
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        FirebaseRecyclerAdapter<Data,DataViewHolder>firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Data, DataViewHolder>
-                (Data.class,R.layout.daftar_gym,DataViewHolder.class,mDatabase) {
-            @Override
-            protected void populateViewHolder(DataViewHolder dataViewHolder, Data data, int i) {
-                dataViewHolder.setTitle(data.getNamaGym());
-                dataViewHolder.setAlamat(data.getAlamatGym());
-            }
-        };
-
-        mGymList.setAdapter(firebaseRecyclerAdapter);
-
-    }
-
-    public static class DataViewHolder extends RecyclerView.ViewHolder
-    {
-        View mView;
-        public DataViewHolder(View itemView)
-        {
-            super(itemView);
-            mView=itemView;
-        }
-        public void setTitle(String title){
-            TextView postTitle=(TextView)mView.findViewById(R.id.tvNama);
-            postTitle.setText(title);
-        }
-        public void setAlamat(String ala){
-            TextView postAlamat=(TextView)mView.findViewById(R.id.tvAlamat);
-            postAlamat.setText(ala);
-        }
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        FirebaseRecyclerAdapter<Data,DataViewHolder>firebaseRecyclerAdapter=new FirebaseRecyclerAdapter<Data, DataViewHolder>
+//                (Data.class,R.layout.daftar_gym,DataViewHolder.class,mDatabase) {
+//            @Override
+//            protected void populateViewHolder(DataViewHolder dataViewHolder, Data data, int i) {
+//                dataViewHolder.setTitle(data.getNamaGym());
+//                dataViewHolder.setAlamat(data.getAlamatGym());
+//            }
+//        };
+//
+//        mGymList.setAdapter(firebaseRecyclerAdapter);
+//
+//    }
+//
+//    public static class DataViewHolder extends RecyclerView.ViewHolder
+//    {
+//        View mView;
+//        public DataViewHolder(View itemView)
+//        {
+//            super(itemView);
+//            mView=itemView;
+//        }
+//        public void setTitle(String title){
+//            TextView postTitle=(TextView)mView.findViewById(R.id.tvNama);
+//            postTitle.setText(title);
+//        }
+//        public void setAlamat(String ala){
+//            TextView postAlamat=(TextView)mView.findViewById(R.id.tvAlamat);
+//            postAlamat.setText(ala);
+//        }
+//    }
 
 
 }
