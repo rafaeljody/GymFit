@@ -16,6 +16,14 @@ public class Data implements Serializable {
             biaya_satuBulan, biaya_duaBulan, biaya_tigaBulan,
             enamBulan, biayaPerpanjangan;
 
+    public String getNamaTrainerGym() {
+        return namaTrainerGym;
+    }
+
+    public void setNamaTrainerGym(String namaTrainerGym) {
+        this.namaTrainerGym = namaTrainerGym;
+    }
+
     //Deklrasi Personal Trainer
     private String biaya_5Pertemuan, biaya_10Pertemuan,
             biaya_15Pertemuan, biaya_20Pertemuan;
