@@ -30,7 +30,7 @@ public class Data implements Serializable {
 
     private String namaTrainerGym;
 
-    private String fasilitas,kelas, peralatan, personal_trainer, keunggulan;
+    private String fasilitas,kelas, peralatan, gymmachine ,keunggulan;
 
     private String imgUrl;
     private String imgUrlTrainer;
@@ -45,7 +45,7 @@ public class Data implements Serializable {
                 String enamBulan, String biayaPerpanjangan,
                 String biaya_5Pertemuan, String biaya_10Pertemuan,
                 String biaya_15Pertemuan, String biaya_20Pertemuan,String namaTrainerGym,
-                String imgUrl,String imgUrlTrainer) {
+                String imgUrl,String imgUrlTrainer, String fasilitas, String kelas, String peralatan, String gymmachine, String keunggulan) {
 
         this.namaGym = namaGym;
         this.alamatGym = alamatGym;
@@ -64,6 +64,51 @@ public class Data implements Serializable {
         this.namaTrainerGym = namaTrainerGym;
         this.imgUrl = imgUrl;
         this.imgUrlTrainer = imgUrlTrainer;
+        this.fasilitas = fasilitas;
+        this.kelas = kelas;
+        this.peralatan = peralatan;
+        this.gymmachine = gymmachine;
+        this.keunggulan = keunggulan;
+    }
+
+    public String getFasilitas() {
+        return fasilitas;
+    }
+
+    public void setFasilitas(String fasilitas) {
+        this.fasilitas = fasilitas;
+    }
+
+    public String getKelas() {
+        return kelas;
+    }
+
+    public void setKelas(String kelas) {
+        this.kelas = kelas;
+    }
+
+    public String getPeralatan() {
+        return peralatan;
+    }
+
+    public void setPeralatan(String peralatan) {
+        this.peralatan = peralatan;
+    }
+
+    public String getGymmachine() {
+        return gymmachine;
+    }
+
+    public void setGymmachine(String gymmachine) {
+        this.gymmachine = gymmachine;
+    }
+
+    public String getKeunggulan() {
+        return keunggulan;
+    }
+
+    public void setKeunggulan(String keunggulan) {
+        this.keunggulan = keunggulan;
     }
 
     public String getImgUrl() {
@@ -212,8 +257,13 @@ public class Data implements Serializable {
                 ", biaya_15Pertemuan='" + biaya_15Pertemuan + '\'' +
                 ", biaya_20Pertemuan='" + biaya_20Pertemuan + '\'' +
                 ", namaTrainerGym='" + namaTrainerGym + '\'' +
-                ", imgurl='"+ imgUrl +'\'' +
-                ", imgurlTrainer='" + imgUrlTrainer + '\'' +
+                ", fasilitas='" + fasilitas + '\'' +
+                ", kelas='" + kelas + '\'' +
+                ", peralatan='" + peralatan + '\'' +
+                ", gymmachine='" + gymmachine + '\'' +
+                ", keunggulan='" + keunggulan + '\'' +
+                ", imgUrl='" + imgUrl + '\'' +
+                ", imgUrlTrainer='" + imgUrlTrainer + '\'' +
                 '}';
     }
 }

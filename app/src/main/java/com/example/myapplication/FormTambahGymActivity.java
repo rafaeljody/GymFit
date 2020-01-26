@@ -40,7 +40,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
     EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
     EditText etPendaftar, etInsidental, etBiaya1, etBiaya2, etBiaya3, etBiaya6, etPerpanjangan; // Paket Membership
     EditText etTemu5, etTemu10, etTemu15, etTemu20; // Biaya Personal Trainer
-    EditText etFasilitas, etKelas, etPeralatan, etKeunggulan,etNamaTrainerGym;
+    EditText etFasilitas, etKelas, etPeralatan, etKeunggulan,etNamaTrainerGym, etGymmachine;
 
 
     Button btUpload,btSubmitDB,btUploadMesin;
@@ -102,6 +102,12 @@ public class FormTambahGymActivity extends AppCompatActivity {
         etNamaTrainerGym =  (EditText) findViewById(R.id.edtNamaTrainerGym);
 
         etKeunggulan    = (EditText) findViewById(R.id.edt_Keunggulan);
+        etFasilitas = (EditText) findViewById(R.id.edt_Fasilitas);
+        etKelas = (EditText) findViewById(R.id.edt_Kelas);
+        etPeralatan = (EditText) findViewById(R.id.edt_Peralatan);
+        etGymmachine = (EditText) findViewById(R.id.edt_MachineGym);
+
+
 
         //inisialisasi Button Submit dan Upload
         btSubmitDB      = (Button) findViewById(R.id.btn_submit);
@@ -203,7 +209,13 @@ public class FormTambahGymActivity extends AppCompatActivity {
                                         etTemu20.getText().toString(),
                                         etNamaTrainerGym.getText().toString(),
                                         temp1,
-                                        temp2));
+                                        temp2,
+                                        etFasilitas.getText().toString(),
+                                        etKelas.getText().toString(),
+                                        etPeralatan.getText().toString(),
+                                        etGymmachine.getText().toString(),
+                                        etKeunggulan.getText().toString()
+                                        ));
                             }
                         });
                     }
@@ -275,10 +287,12 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 etTemu15.setText("");
                 etTemu20.setText("");
 
-                //etFasilitas.setText("");
-//                etKelas.setText("");
-  //              etPeralatan.setText("");
-    //            etKeunggulan.setText("");
+                etFasilitas.setText("");
+                etKelas.setText("");
+                etPeralatan.setText("");
+                etKeunggulan.setText("");
+                etGymmachine.setText("");
+                etNamaTrainerGym.setText("");
 
 
 
