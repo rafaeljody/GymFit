@@ -18,8 +18,8 @@ public class profil_gym extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil_gym);
 
-        String nama_gym = getIntent().getStringExtra("nama_gym");
-        String alamat_gym = getIntent().getStringExtra("alamat_gym");
+        String nama_gym = getIntent().getStringExtra("namagym");
+        String alamat_gym = getIntent().getStringExtra("alamatgym");
 
 
         tnama_gym= (TextView) findViewById(R.id.tvNamaGym);
