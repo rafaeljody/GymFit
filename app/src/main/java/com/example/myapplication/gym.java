@@ -80,6 +80,16 @@ public class gym extends AppCompatActivity {
                         Intent i = new Intent(gym.this, profil_gym.class);
                         i.putExtra("namagym", data.getNamaGym());
                         i.putExtra("alamatgym", data.getAlamatGym());
+                        i.putExtra("teleponGym",data.getTeleponGym());
+                        i.putExtra("img_gym",data.getImgUrl());
+                        i.putExtra("pendaftaranMb",data.getBiaya_pendaftaran());
+                        i.putExtra("biaya_satu",data.getBiaya_satuBulan());
+                        i.putExtra("biaya_dua",data.getBiaya_duaBulan());
+                        i.putExtra("biaya_tiga",data.getBiaya_tigaBulan());
+                        i.putExtra("biaya_enam",data.getEnamBulan());
+                        i.putExtra("insidentalMb",data.getBiaya_insindental());
+                        i.putExtra("perpanjangan",data.getBiayaPerpanjangan());
+
                         startActivity(i);
                     }
                 });

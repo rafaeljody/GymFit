@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.net.Uri;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -40,7 +39,7 @@ public class profil_trainer extends AppCompatActivity {
         tSertifikasi=(TextView)findViewById(R.id.tvSertifikasi);
         tTarif=(TextView)findViewById(R.id.tvTarif);
         tNoTelp=(TextView)findViewById(R.id.tvNoHp);
-        tPendidikan=(TextView)findViewById(R.id.tvPendidikan);
+        tPendidikan=(TextView)findViewById(R.id.tv_pendaftaran);
         tImg=(ImageView)findViewById(R.id.profileTrainer);
 
 

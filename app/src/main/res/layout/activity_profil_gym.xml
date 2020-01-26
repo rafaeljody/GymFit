@@ -131,138 +131,397 @@
                     android:text="Paket Membership"
                     android:textColor="#252527"
                     android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pendaftaran"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin Paket Membership"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_satubulan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Paket satu bulan"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_duabulan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Paket dua bulan"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_tigabulan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Paket tiga bulan"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_enambulan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Paket enam bulan"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_insindental"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="biaya Insidental"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_perpanjangan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Biaya Perpanjangan Membership"
+                    android:textSize="16.8sp" />
+
+
             </LinearLayout>
 
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvPaket"
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="10dp"></androidx.recyclerview.widget.RecyclerView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="36dp"
-                android:text="Personal Trainer"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvTrainer"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Personal Trainer"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="10dp">
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="36dp"
-                android:text="Biaya Personal Trainer"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvByTrainer"
+                <TextView
+                    android:id="@+id/tvPT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin data Trainer"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="10dp">
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="36dp"
-                android:text="Fasilitas Gym"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvFasilitas"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Biaya Personal Trainer"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="10dp">
-            </androidx.recyclerview.widget.RecyclerView>
-
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="36dp"
-                android:text="Kelas"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvKelas"
+                <TextView
+                    android:id="@+id/tvBiayaPT"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin Paket Membership"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="10dp">
-            </androidx.recyclerview.widget.RecyclerView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="36dp"
-                android:text="Peralatan Kebugaran"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvPeralatan"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fasilitas Gym"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="10dp">
-            </androidx.recyclerview.widget.RecyclerView>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="36dp"
-                android:text="Gym Machine"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvGymMachine"
+                <TextView
+                    android:id="@+id/tvFasilitas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin Paket Membership"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
-                android:paddingLeft="10dp">
-            </androidx.recyclerview.widget.RecyclerView>
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Kelas"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="36dp"
-                android:text="Keunggulan Gym"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/tvKeunggulan"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:id="@+id/tvKelas"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin Paket Membership"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="nampilin Keunggulan Gym"
-                android:textColor="#252527"
-                android:textSize="16.8sp" />
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Peralatan Kebugaran"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPeralatanKebug"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin Paket Membership"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gym Machine"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvGymMachine"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin Paket Membership"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Keunggulan Gym"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvKeunggulan"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Nampilin Paket Membership"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
 
         </LinearLayout>
 
