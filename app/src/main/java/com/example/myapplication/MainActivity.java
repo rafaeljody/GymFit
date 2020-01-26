@@ -95,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tipss(){
-        Intent intent = new Intent(MainActivity.this, TipsActivity.class);
+        Intent intent = new Intent(MainActivity.this, MasukEduActivity.class);
         startActivity(intent);
     }
     public void gymm(){
@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void tips(View view){
-        Intent intent = new Intent(MainActivity.this, TipsActivity.class);
+        Intent intent = new Intent(MainActivity.this, MasukEduActivity.class);
         startActivity(intent);
     }
 

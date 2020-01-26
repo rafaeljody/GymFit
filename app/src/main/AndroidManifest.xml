@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".form_edit_data_trainer"></activity>
+        <activity android:name=".MasukEduActivity"></activity>
+        <activity android:name=".form_edit_data_trainer" />
         <activity android:name=".form_edit_data_gym" />
         <activity android:name=".content_foto_trainer_gym" />
         <activity android:name=".TipsActivity" />
@@ -27,8 +28,8 @@
         <activity android:name=".profil_trainer" />
         <activity android:name=".trainer" />
         <activity android:name=".gym" />
-        <activity android:name=".profil_gym"/>
-        <activity android:name=".WelcomeActivity"/>
+        <activity android:name=".profil_gym" />
+        <activity android:name=".WelcomeActivity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,8 +37,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
 
         <meta-data
             android:name="preloaded_fonts"
