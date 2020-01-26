@@ -70,6 +70,7 @@
                                 <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
+                                    android:gravity="center"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_marginTop="30dp"
                                     android:orientation="vertical">
@@ -104,8 +105,9 @@
 
                                     <TextView
                                         android:id="@+id/tvNoHp"
-                                        android:layout_width="match_parent"
+                                        android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
                                         android:layout_marginTop="14dp"
                                         android:text="Nomor Telephone"
                                         android:textColor="#b9b6b6"
@@ -132,11 +134,13 @@
 
                     <ImageView
                         android:id="@+id/profileTrainer"
-                        android:layout_width="120dp"
-                        android:layout_height="120dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginBottom="16dp"
                         android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
                         android:background="@drawable/circle"
-                        android:src="@drawable/pt"
+                        android:src="@drawable/placeholder"
                         android:elevation="5dp" />
 
                 </FrameLayout>
