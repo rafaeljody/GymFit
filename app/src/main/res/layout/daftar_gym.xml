@@ -16,7 +16,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="16dp"
         android:layout_marginBottom="8dp"
-        android:clickable="true"
         app:cardCornerRadius="16dp"
         card_view:cardElevation="4dp"
         card_view:cardMaxElevation="6dp">
@@ -40,6 +39,7 @@
                     android:layout_width="80dp"
                     android:layout_height="80dp"
                     android:layout_gravity="center_vertical"
+                    android:src="@drawable/placeholder"
                     android:layout_marginLeft="16dp" />
 
                 <LinearLayout

@@ -33,6 +33,7 @@ import java.util.ArrayList;
 
 public class gym extends AppCompatActivity {
 
+
     private RecyclerView mGymList;
     private ArrayList<Data> arrayList;
     private FirebaseRecyclerOptions<Data>options;
@@ -77,10 +78,9 @@ public class gym extends AppCompatActivity {
                     @Override
                     public void onClick(View view) {
                         Intent i = new Intent(gym.this, profil_gym.class);
-                        i.putExtra("nama_gym", data.getNamaGym());
-                        i.putExtra("alamat_gym", data.getAlamatGym());
+                        i.putExtra("namagym", data.getNamaGym());
+                        i.putExtra("alamatgym", data.getAlamatGym());
                         startActivity(i);
-
                     }
                 });
             }

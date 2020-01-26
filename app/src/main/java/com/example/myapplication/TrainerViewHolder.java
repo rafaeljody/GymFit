@@ -21,15 +21,5 @@ public class TrainerViewHolder extends RecyclerView.ViewHolder {
         splesialisasi=view.findViewById(R.id.tvSpesialisasi);
         img=view.findViewById(R.id.imgTrainer);
 
-//        public void setDetails(Context ctx, String namaa, String spesial, String image){
-//            //Views
-//            nama=mView.findViewById(R.id.tvNama);
-//            splesialisasi=mView.findViewById(R.id.tvSpesialisasi);
-//            img=mView.findViewById(R.id.imgTrainer);
-//            //set data to views
-//            nama.setText(namaa);
-//            splesialisasi.setText(spesial);
-//            Picasso.get().load(image).into(img);
-//        }
     }
 }

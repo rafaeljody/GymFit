@@ -35,6 +35,7 @@ public class trainer extends AppCompatActivity {
     private Uri u;
     private Context c;
 
+
     @Override
     protected void onStart() {
         super.onStart();

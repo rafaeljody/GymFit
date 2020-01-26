@@ -27,6 +27,7 @@
         <activity android:name=".profil_trainer" />
         <activity android:name=".trainer" />
         <activity android:name=".gym" />
+        <activity android:name=".profil_gym"/>
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

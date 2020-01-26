@@ -379,7 +379,7 @@
                                 android:scaleType="centerCrop" />
 
                             <EditText
-                                android:id="@+id/editText"
+                                android:id="@+id/edtNamaTrainerGym"
                                 android:hint="Masukkan Nama Trainer"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content" />

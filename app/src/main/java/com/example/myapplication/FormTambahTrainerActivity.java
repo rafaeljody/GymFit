@@ -92,7 +92,6 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                 }else{
                     FileUploader();
 
-
                 }
             }
         });

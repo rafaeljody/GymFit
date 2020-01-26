@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 public class profil_gym extends AppCompatActivity {
 
+
     TextView tnama_gym, talamat_gym, tnoTelp;
     ImageView tImg_gym, tImg_trainer;
 
@@ -21,7 +22,7 @@ public class profil_gym extends AppCompatActivity {
         String alamat_gym = getIntent().getStringExtra("alamat_gym");
 
 
-        tnama_gym= (TextView) findViewById(R.id.tvNama);
+        tnama_gym= (TextView) findViewById(R.id.tvNamaGym);
         talamat_gym = (TextView) findViewById(R.id.tvAlamat);
 
 

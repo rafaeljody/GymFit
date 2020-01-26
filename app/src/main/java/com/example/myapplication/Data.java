@@ -20,6 +20,7 @@ public class Data implements Serializable {
     private String biaya_5Pertemuan, biaya_10Pertemuan,
             biaya_15Pertemuan, biaya_20Pertemuan;
 
+    private String namaTrainerGym;
 
     private String imgUrl;
     private String imgUrlTrainer;
@@ -33,7 +34,7 @@ public class Data implements Serializable {
                 String biaya_duaBulan, String biaya_tigaBulan,
                 String enamBulan, String biayaPerpanjangan,
                 String biaya_5Pertemuan, String biaya_10Pertemuan,
-                String biaya_15Pertemuan, String biaya_20Pertemuan,
+                String biaya_15Pertemuan, String biaya_20Pertemuan,String namaTrainerGym,
                 String imgUrl,String imgUrlTrainer) {
 
         this.namaGym = namaGym;
@@ -50,6 +51,7 @@ public class Data implements Serializable {
         this.biaya_10Pertemuan = biaya_10Pertemuan;
         this.biaya_15Pertemuan = biaya_15Pertemuan;
         this.biaya_20Pertemuan = biaya_20Pertemuan;
+        this.namaTrainerGym = namaTrainerGym;
         this.imgUrl = imgUrl;
         this.imgUrlTrainer = imgUrlTrainer;
     }
@@ -199,6 +201,7 @@ public class Data implements Serializable {
                 ", biaya_10Pertemuan='" + biaya_10Pertemuan + '\'' +
                 ", biaya_15Pertemuan='" + biaya_15Pertemuan + '\'' +
                 ", biaya_20Pertemuan='" + biaya_20Pertemuan + '\'' +
+                ", namaTrainerGym='" + namaTrainerGym + '\'' +
                 ", imgurl='"+ imgUrl +'\'' +
                 ", imgurlTrainer='" + imgUrlTrainer + '\'' +
                 '}';

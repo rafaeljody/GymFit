@@ -11,6 +11,7 @@ import com.squareup.picasso.Picasso;
 
 public class profil_trainer extends AppCompatActivity {
 
+
     TextView tNama,tSpesial,tSosmed,tHomeBase,tPengalaman,tArea,tSertifikasi,tTarif,tNoTelp,tPendidikan;
     ImageView tImg;
     @Override
