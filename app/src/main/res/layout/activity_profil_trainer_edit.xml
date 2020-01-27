@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:shadow="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".profil_trainer">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="50dp">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="345dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:background="@color/C1" />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="0dp"
+                    android:elevation="3dp">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="225dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="47dp"
+                        android:layout_marginRight="10dp"
+                        android:elevation="5dp">
+
+                        <com.dd.ShadowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="#ffffff"
+                            shadow:sl_cornerRadius="10dp"
+                            shadow:sl_dx="2dp"
+                            shadow:sl_dy="2dp"
+                            shadow:sl_shadowColor="#11e1e2e4">
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="186dp"
+                                android:background="@drawable/rounded_corner_5dp"
+                                android:orientation="vertical">
+
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="30dp"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/tvNama"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="30dp"
+                                        android:fontFamily="sans-serif-condensed-medium"
+                                        android:text="Nama Lengkap"
+                                        android:textColor="#4f4f4f"
+                                        android:textSize="18.5sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvSosmed"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:fontFamily="sans-serif-condensed-medium"
+                                        android:text="Nama Akun Sosmed"
+                                        android:textColor="#b9b6b6"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvHomeBase"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:fontFamily="sans-serif-condensed-medium"
+                                        android:text="Home Base"
+                                        android:textColor="#b9b6b6"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvNoHp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:layout_marginTop="14dp"
+                                        android:fontFamily="sans-serif-condensed-medium"
+                                        android:text="Nomor Telephone"
+                                        android:textColor="#b9b6b6"
+                                        android:textSize="14sp" />
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="bottom"
+                                android:layout_marginBottom="20dp"
+                                android:orientation="horizontal">
+
+
+                            </LinearLayout>
+                        </com.dd.ShadowLayout>
+
+                    </FrameLayout>
+
+
+                    <ImageView
+                        android:id="@+id/profileTrainer"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="16dp"
+                        android:background="@drawable/circle"
+                        android:elevation="5dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/placeholder" />
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Pendidikan"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_pendaftaran"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nampilin Pendidikan dari Database"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="On Call Area"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvOnCall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nampilin On Call Area Dari Database"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Pengalaman Kerja"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvPengalaman"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nampilin Pengalaman Kerja Dari Database"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Sertifikasi"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvSertifikasi"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nampilin Sertifikasi Dari Database"
+                    android:textSize="16.8sp" />
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Keahlian"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvKeahlian"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nampilin Keahlian Dari Database"
+                    android:textSize="16.8sp" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="33dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Tarif Pertemuan (/bulan)"
+                    android:textColor="#252527"
+                    android:textSize="16.8sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="19dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTarif"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:text="Nampilin Tarif Pertemuan Dari Database"
+                    android:textSize="16.8sp" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_submit"
+                android:layout_width="174dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="16dp"
+                android:background="@drawable/roundedbutton"
+                android:text="EDIT"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

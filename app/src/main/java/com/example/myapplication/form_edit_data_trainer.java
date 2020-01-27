@@ -23,8 +23,8 @@ public class form_edit_data_trainer extends AppCompatActivity {
     EditText edtNama_trainer, edtPend_formal, edtGym_home, edtOn_call,
             edtNomor_telp, edtSosmed, edtPengalaman, edtTarif, edtSertifikasi, edtKeahlian;
 
-
     Button btSubmit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

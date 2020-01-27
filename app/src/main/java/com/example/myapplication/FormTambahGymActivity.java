@@ -297,6 +297,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
 
 
                 Snackbar.make(findViewById(R.id.btn_submit),"Data Berhasil Ditambahkan", Snackbar.LENGTH_LONG).show();
+
             }
         });
 

@@ -71,10 +71,10 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center"
-                    android:paddingBottom="32dp"
                     android:background="@color/C5"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingBottom="32dp">
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -83,21 +83,19 @@
                         android:orientation="horizontal">
 
 
-
-
                         <androidx.cardview.widget.CardView
                             android:id="@+id/pp1"
-                            android:layout_width="160dp"
+                            android:layout_width="360dp"
                             android:layout_height="200dp"
                             android:layout_gravity="center"
                             android:layout_marginLeft="16dp"
                             android:layout_marginTop="16dp"
                             android:layout_marginRight="8dp"
                             android:layout_marginBottom="8dp"
-                            app:cardBackgroundColor="@color/C4"
                             android:clickable="true"
                             android:onClick="tambah"
-                            app:cardCornerRadius="16dp"
+                            app:cardBackgroundColor="@color/C4"
+                            app:cardCornerRadius="25dp"
                             card_view:cardElevation="6dp"
                             card_view:cardPreventCornerOverlap="false">
 
@@ -106,11 +104,11 @@
                                 android:layout_height="match_parent"
                                 android:gravity="center"
                                 android:orientation="vertical">
+
                                 <ImageView
                                     android:layout_width="100dp"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/add"
-                                    />
+                                    android:src="@drawable/add" />
 
                                 <TextView
                                     android:layout_width="wrap_content"
@@ -123,47 +121,11 @@
 
                         </androidx.cardview.widget.CardView>
 
-                        <androidx.cardview.widget.CardView
-                            android:id="@+id/pp2"
-                            android:layout_width="160dp"
-                            android:layout_height="200dp"
-                            android:layout_gravity="center"
-                            android:layout_marginLeft="8dp"
-                            android:layout_marginTop="16dp"
-                            android:layout_marginRight="16dp"
-                            android:layout_marginBottom="8dp"
-                            app:cardBackgroundColor="@color/C4"
-                            android:clickable="true"
-                            android:onClick="edit"
-                            app:cardCornerRadius="16dp"
-                            card_view:cardElevation="6dp"
-                            card_view:cardPreventCornerOverlap="false">
 
-                            <LinearLayout
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="center"
-                                android:orientation="vertical">
-                                <ImageView
-                                    android:layout_width="100dp"
-                                    android:layout_height="100dp"
-                                    android:src="@drawable/edit"
-                                    />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="18dp"
-                                    android:fontFamily="@font/montserratsemibold"
-                                    android:text="Edit data" />
-
-                            </LinearLayout>
-
-                        </androidx.cardview.widget.CardView>
                     </LinearLayout>
 
 
                 </LinearLayout>
-
 
 
             </androidx.cardview.widget.CardView>

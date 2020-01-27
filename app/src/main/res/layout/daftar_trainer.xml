@@ -68,6 +68,16 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content" />
 
+<!--                    <Button-->
+<!--                        android:id="@+id/btn_edit"-->
+<!--                        android:layout_width="168dp"-->
+<!--                        android:layout_height="29dp"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_margin="16dp"-->
+<!--                        android:background="@drawable/roundedbutton"-->
+<!--                        android:text="EDIT"-->
+<!--                        android:textColor="@android:color/white" />-->
+
 
                 </LinearLayout>
             </LinearLayout>

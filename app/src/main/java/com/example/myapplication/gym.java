@@ -98,10 +98,10 @@ public class gym extends AppCompatActivity {
 
                         i.putExtra("fasilitas_gym",data.getFasilitas());
                         i.putExtra("kelas_gym",data.getKelas());
-                        i.putExtra("peralatan_gym",data.getPeralatan());
-                        i.putExtra("keunguulan_gym",data.getKeunggulan());
+                        i.putExtra("peralatan_gym",data.getPeralatan_kebugaran());
+                        i.putExtra("keunggulan_gym",data.getKeunggulan_gym());
                         i.putExtra("gym_machine",data.getGymmachine());
-                        i.putExtra("keunggulan_gym",data.getKeunggulan());
+
                         startActivity(i);
                     }
                 });

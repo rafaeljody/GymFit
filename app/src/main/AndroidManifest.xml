@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MasukEduActivity"></activity>
+        <activity android:name=".profil_trainer_edit" />
+        <activity android:name=".MasukEduActivity" />
         <activity android:name=".form_edit_data_trainer" />
         <activity android:name=".form_edit_data_gym" />
         <activity android:name=".content_foto_trainer_gym" />
@@ -37,7 +38,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
 
         <meta-data
             android:name="preloaded_fonts"

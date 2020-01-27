@@ -10,15 +10,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.sax.StartElementListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
@@ -34,22 +37,26 @@ public class trainer extends AppCompatActivity {
     private DatabaseReference mDatabase;
     private Uri u;
     private Context c;
+    private FirebaseAuth auth;
+
+
+
 
 
     @Override
-    protected void onStart() {
+    public void onStart() {
         super.onStart();
         adapter.startListening();
     }
 
     @Override
-    protected void onStop() {
+    public void onStop() {
         super.onStop();
         adapter.stopListening();
     }
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_trainer);
 
@@ -61,13 +68,22 @@ public class trainer extends AppCompatActivity {
 
         mDatabase= FirebaseDatabase.getInstance().getReference().child("DATA TRAINER");
         mDatabase.keepSynced(true);
+        auth = FirebaseAuth.getInstance();
+
         option = new FirebaseRecyclerOptions.Builder<personalTrainer>().setQuery(mDatabase,personalTrainer.class).build();
         adapter = new FirebaseRecyclerAdapter<personalTrainer, TrainerViewHolder>(option) {
             @Override
-            protected void onBindViewHolder(@NonNull TrainerViewHolder trainerViewHolder, int i, @NonNull final personalTrainer personalTrainer) {
+            public void onBindViewHolder(@NonNull final TrainerViewHolder trainerViewHolder, int i, @NonNull final personalTrainer personalTrainer) {
                 PicassoTrainer.downloadImage(c,personalTrainer.getImgUrl(),trainerViewHolder.img);
                 trainerViewHolder.nama.setText(personalTrainer.getNama_trainer());
                 trainerViewHolder.splesialisasi.setText(personalTrainer.getKeahlian());
+//
+//                if (auth.getCurrentUser() != null){
+//                    trainerViewHolder.btEdit.setVisibility(View.VISIBLE);
+//                }else {
+//                    trainerViewHolder.btEdit.setVisibility(View.INVISIBLE);
+//                }
+
                 trainerViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
@@ -84,10 +100,21 @@ public class trainer extends AppCompatActivity {
                         i.putExtra("notelp",personalTrainer.getNomor_telp());
                         i.putExtra("img",personalTrainer.getImgUrl());
                         startActivity(i);
+
+
+
+
                     }
                 });
-            }
 
+//                trainerViewHolder.btEdit.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        startActivity();
+//                    }
+//                });
+
+            }
             @NonNull
             @Override
             public TrainerViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

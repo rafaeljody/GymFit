@@ -7,7 +7,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -84,9 +86,10 @@ public class AdminActivity extends AppCompatActivity {
     }
 
     public void logout(){
-        Intent intent = new Intent(AdminActivity.this, MainActivity.class);
 
+        Intent intent = new Intent(AdminActivity.this, MainActivity.class);
         startActivity(intent);
+        finish();
     }
     public void about(){
         Intent intent = new Intent(AdminActivity.this, AboutActivity.class);
