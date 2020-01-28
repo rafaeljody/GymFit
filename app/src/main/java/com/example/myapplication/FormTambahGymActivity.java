@@ -83,7 +83,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
         //inisialisasi Detail GYM
         etNamaGym       = (EditText) findViewById(R.id.edt_NamaGym);
         etAlamatGym     = (EditText) findViewById(R.id.edt_Alamat);
-        etNomorHP       = (EditText) findViewById(R.id.edt_NoTelp);
 
         //inisialisasi Paket Membership
         etPendaftar     = (EditText) findViewById(R.id.edt_pktPendaftaran);
@@ -195,7 +194,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
                                 submitData(new Data(
                                         etNamaGym.getText().toString(),
                                         etAlamatGym.getText().toString(),
-                                        etNomorHP.getText().toString(),
                                         etPendaftar.getText().toString(),
                                         etInsidental.getText().toString(),
                                         etBiaya1.getText().toString(),
@@ -270,7 +268,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 // set data Detail gym
                 etNamaGym.setText("");
                 etAlamatGym.setText("");
-                etNomorHP.setText("");
 
                 //set data paket membership
                 etPendaftar.setText("");

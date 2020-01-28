@@ -94,16 +94,16 @@
                                         android:textColor="#b9b6b6"
                                         android:textSize="14sp" />
 
-                                    <TextView
-                                        android:id="@+id/tvNoTelp"
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:layout_gravity="center_horizontal"
-                                        android:layout_marginTop="14dp"
-                                        android:fontFamily="sans-serif-condensed-medium"
-                                        android:text="No Telepon"
-                                        android:textColor="#b9b6b6"
-                                        android:textSize="14sp" />
+<!--                                    <TextView-->
+<!--                                        android:id="@+id/tvNoTelp"-->
+<!--                                        android:layout_width="wrap_content"-->
+<!--                                        android:layout_height="wrap_content"-->
+<!--                                        android:layout_gravity="center_horizontal"-->
+<!--                                        android:layout_marginTop="14dp"-->
+<!--                                        android:fontFamily="sans-serif-condensed-medium"-->
+<!--                                        android:text="No Telepon"-->
+<!--                                        android:textColor="#b9b6b6"-->
+<!--                                        android:textSize="14sp" />-->
 
                                 </LinearLayout>
 

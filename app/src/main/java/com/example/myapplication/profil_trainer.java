@@ -26,7 +26,6 @@ public class profil_trainer extends AppCompatActivity {
         String area=getIntent().getStringExtra("area");
         String sertifikasi=getIntent().getStringExtra("sertifikasi");
         String tarif=getIntent().getStringExtra("tarif");
-        String notelp=getIntent().getStringExtra("notelp");
         String pendidikan=getIntent().getStringExtra("pendidikan");
         String img=getIntent().getStringExtra("img");
 
@@ -38,7 +37,6 @@ public class profil_trainer extends AppCompatActivity {
         tArea=(TextView)findViewById(R.id.tvOnCall);
         tSertifikasi=(TextView)findViewById(R.id.tvSertifikasi);
         tTarif=(TextView)findViewById(R.id.tvTarif);
-        tNoTelp=(TextView)findViewById(R.id.tvNoHp);
         tPendidikan=(TextView)findViewById(R.id.tv_pendaftaran);
         tImg=(ImageView)findViewById(R.id.profileTrainer);
 
@@ -51,7 +49,6 @@ public class profil_trainer extends AppCompatActivity {
         tArea.setText(area);
         tSertifikasi.setText(sertifikasi);
         tTarif.setText(tarif);
-        tNoTelp.setText(notelp);
         tPendidikan.setText(pendidikan);
 
         Picasso.get().load(img).into(tImg);

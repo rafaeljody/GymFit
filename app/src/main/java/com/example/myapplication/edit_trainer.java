@@ -75,7 +75,6 @@ public class edit_trainer extends AppCompatActivity {
                         a.putExtra("area", personalTrainer.getOn_call_area());
                         a.putExtra("sertifikasi", personalTrainer.getSertifikasi());
                         a.putExtra("tarif", personalTrainer.getTarif_pertemuan());
-                        a.putExtra("notelp", personalTrainer.getNomor_telp());
                         a.putExtra("img", personalTrainer.getImgUrl());
                         startActivity(a);
 

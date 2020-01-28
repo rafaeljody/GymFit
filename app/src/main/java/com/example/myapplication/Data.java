@@ -9,7 +9,6 @@ public class Data implements Serializable {
     //Deklarasi String Detail GYM
     private String namaGym;
     private String alamatGym;
-    private String teleponGym;
 
     //Deklarasi Paket Membership
     private String biaya_pendaftaran, biaya_insindental,
@@ -38,8 +37,7 @@ public class Data implements Serializable {
     public Data() {
     }
 
-    public Data(String namaGym, String alamatGym,
-                String teleponGym, String biaya_pendaftaran,
+    public Data(String namaGym, String alamatGym, String biaya_pendaftaran,
                 String biaya_insindental, String biaya_satuBulan,
                 String biaya_duaBulan, String biaya_tigaBulan,
                 String enamBulan, String biayaPerpanjangan,
@@ -49,7 +47,6 @@ public class Data implements Serializable {
 
         this.namaGym = namaGym;
         this.alamatGym = alamatGym;
-        this.teleponGym = teleponGym;
         this.biaya_pendaftaran = biaya_pendaftaran;
         this.biaya_insindental = biaya_insindental;
         this.biaya_satuBulan = biaya_satuBulan;
@@ -135,13 +132,6 @@ public class Data implements Serializable {
         this.alamatGym = alamatGym;
     }
 
-    public String getTeleponGym() {
-        return teleponGym;
-    }
-
-    public void setTeleponGym(String teleponGym) {
-        this.teleponGym = teleponGym;
-    }
 
     public String getBiaya_pendaftaran() {
         return biaya_pendaftaran;
@@ -244,7 +234,6 @@ public class Data implements Serializable {
         return "Data{" +
                 "namaGym='" + namaGym + '\'' +
                 ", alamatGym='" + alamatGym + '\'' +
-                ", teleponGym='" + teleponGym + '\'' +
                 ", biaya_pendaftaran='" + biaya_pendaftaran + '\'' +
                 ", biaya_insindental='" + biaya_insindental + '\'' +
                 ", biaya_satuBulan='" + biaya_satuBulan + '\'' +

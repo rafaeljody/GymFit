@@ -97,7 +97,6 @@ public class trainer extends AppCompatActivity {
                         i.putExtra("area",personalTrainer.getOn_call_area());
                         i.putExtra("sertifikasi",personalTrainer.getSertifikasi());
                         i.putExtra("tarif",personalTrainer.getTarif_pertemuan());
-                        i.putExtra("notelp",personalTrainer.getNomor_telp());
                         i.putExtra("img",personalTrainer.getImgUrl());
                         startActivity(i);
 

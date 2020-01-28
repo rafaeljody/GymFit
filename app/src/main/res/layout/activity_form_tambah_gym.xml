@@ -66,12 +66,12 @@
                         android:layout_margin="5dp"
                         android:hint="Alamat gym" />
 
-                    <EditText
-                        android:id="@+id/edt_NoTelp"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="5dp"
-                        android:hint="Nomor Telepon" />
+<!--                    <EditText-->
+<!--                        android:id="@+id/edt_NoTelp"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_margin="5dp"-->
+<!--                        android:hint="Nomor Telepon" />-->
 
 
 

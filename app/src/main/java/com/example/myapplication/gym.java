@@ -80,7 +80,6 @@ public class gym extends AppCompatActivity {
                         Intent i = new Intent(gym.this, profil_gym.class);
                         i.putExtra("namagym", data.getNamaGym());
                         i.putExtra("alamatgym", data.getAlamatGym());
-                        i.putExtra("teleponGym",data.getTeleponGym());
                         i.putExtra("img_gym",data.getImgUrl());
 
                         i.putExtra("pendaftaranMb",data.getBiaya_pendaftaran());

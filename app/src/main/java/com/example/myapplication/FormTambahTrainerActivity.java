@@ -71,7 +71,6 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
         etPendidikan    = (EditText) findViewById(R.id.edt_Pend);
         etGym           = (EditText) findViewById(R.id.edt_HomeBase);
         etOn            = (EditText) findViewById(R.id.edt_OnCall);
-        etTelepon       = (EditText) findViewById(R.id.edt_NomorTelp);
         etSosmed        = (EditText) findViewById(R.id.edt_Medsos);
         etPengalaman    = (EditText) findViewById(R.id.edt_PengKerja);
         etTarif         = (EditText) findViewById(R.id.edt_TarifPert);
@@ -120,7 +119,6 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                                         etPendidikan.getText().toString(),
                                         etGym.getText().toString(),
                                         etOn.getText().toString(),
-                                        etTelepon.getText().toString(),
                                         etSosmed.getText().toString(),
                                         etPengalaman.getText().toString(),
                                         etTarif.getText().toString(),
@@ -167,7 +165,6 @@ public class FormTambahTrainerActivity extends AppCompatActivity {
                etPendidikan.setText("");
                etGym.setText("");
                etOn.setText("");
-               etTelepon.setText("");
                etSosmed.setText("");
                etPengalaman.setText("");
                etTarif.setText("");

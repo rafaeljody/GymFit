@@ -54,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.login:
                     login();
                     break;
-                    case R.id.about:
-                        about();
-                        break;
-                    case R.id.help:
-                        help();
-                        break;
+//                    case R.id.about:
+//                        about();
+//                        break;
+//                    case R.id.help:
+//                        help();
+//                        break;
                     case R.id.tips1:
                         tipss();
                         break;
@@ -85,14 +85,14 @@ public class MainActivity extends AppCompatActivity {
 
         startActivity(new Intent(getApplicationContext(),LoginActivity.class));
     }
-    public void about(){
-        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
-        startActivity(intent);
-    }
-    public void help(){
-        Intent intent = new Intent(MainActivity.this, HelpActivity.class);
-        startActivity(intent);
-    }
+//    public void about(){
+//        Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+//        startActivity(intent);
+//    }
+//    public void help(){
+//        Intent intent = new Intent(MainActivity.this, HelpActivity.class);
+//        startActivity(intent);
+//    }
 
     public void tipss(){
         Intent intent = new Intent(MainActivity.this, MasukEduActivity.class);

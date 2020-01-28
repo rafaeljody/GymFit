@@ -64,18 +64,18 @@ public class AdminActivity extends AppCompatActivity {
                     case R.id.logout:
                         logout();
                         break;
-                    case R.id.about:
-                        about();
-                        break;
-                    case R.id.help:
-                        help();
-                        break;
+//                    case R.id.about:
+//                        about();
+//                        break;
+//                    case R.id.help:
+//                        help();
+//                        break;
                     case R.id.tbdata:
                         tambahh();
                         break;
-                    case R.id.eddata:
-                        editt();
-                        break;
+//                    case R.id.eddata:
+//                        editt();
+//                        break;
                     default:
                         return true;
                 }

@@ -29,7 +29,6 @@ public class profil_gym extends AppCompatActivity {
 
         String nama_gym = getIntent().getStringExtra("namagym");
         String alamat_gym = getIntent().getStringExtra("alamatgym");
-        String telepon_gym = getIntent().getStringExtra("teleponGym");
         String img_gym = getIntent().getStringExtra("img_gym");
 
         String pendaftaran_mb = getIntent().getStringExtra("pendaftaranMb");
@@ -54,7 +53,6 @@ public class profil_gym extends AppCompatActivity {
 
         tnama_gym   = (TextView) findViewById(R.id.tvNamaGym);
         talamat_gym = (TextView) findViewById(R.id.tvAlamat);
-        tnoTelp     = (TextView) findViewById(R.id.tvNoTelp);
         tImg_gym    = (ImageView) findViewById(R.id.imgGym);
 
         tPendaftaran    = (TextView) findViewById(R.id.tv_pendaftaran);
@@ -79,7 +77,6 @@ public class profil_gym extends AppCompatActivity {
 
         tnama_gym.setText(nama_gym) ;
         talamat_gym.setText(alamat_gym);
-        tnoTelp.setText(telepon_gym);
 
         //paket membership
         tPendaftaran.setText("Harga Pendaftaran : "+ pendaftaran_mb);
