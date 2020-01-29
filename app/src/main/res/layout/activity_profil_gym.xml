@@ -89,6 +89,7 @@
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:layout_gravity="center"
+                                        android:gravity="center"
                                         android:fontFamily="sans-serif-condensed-medium"
                                         android:text="Alamat Gym"
                                         android:textColor="#b9b6b6"
