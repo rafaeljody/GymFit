@@ -31,7 +31,7 @@ public class TipsActivity extends AppCompatActivity {
         mFaktaTipsPager.setAdapter(ftSliderAdapter);
 
 
-        TextView counter = findViewById(R.id.counter);
+        /*TextView counter = findViewById(R.id.counter);
         counter.setText("1 / "+ftSliderAdapter.getCount());
 
         mFaktaTipsPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
@@ -54,7 +54,7 @@ public class TipsActivity extends AppCompatActivity {
             public void onPageScrollStateChanged(int state) {
 
             }
-        });
+        }); */
 
 
     }

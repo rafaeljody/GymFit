@@ -6,23 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".TipsActivity">
 
-    <TextView
-        android:id="@+id/counter"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_gravity="center|center_horizontal"
-        android:layout_marginBottom="30dp"
-        android:background="@drawable/round_style5"
-        android:fontFamily="@font/montserratbold"
-        android:foregroundGravity="center|center_horizontal"
-        android:gravity="center|center_horizontal"
-        android:lineSpacingExtra="4sp"
-        android:text="1/10"
-        android:textAlignment="center"
-        android:textColor="@android:color/white"
-        android:textSize="16sp" />
+
 
     <View
         android:id="@+id/title"
@@ -52,4 +36,25 @@
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_alignParentLeft="true" />
+
+    <TextView
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Geser"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="150dp"
+        android:fontFamily="@font/montserratbold"
+        android:textColor="@color/C5"
+        android:textSize="16sp"
+        />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="100dp"
+        android:src="@drawable/swipe"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="110dp"
+
+        />
 </RelativeLayout>
