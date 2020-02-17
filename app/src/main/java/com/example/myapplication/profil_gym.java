@@ -17,7 +17,7 @@ public class profil_gym extends AppCompatActivity {
     TextView tnama_gym, talamat_gym, tnoTelp,
             tPendaftaran,tbiaya_satu,tbiaya_dua,
             tbiaya_tiga,tbiaya_enam, tperpanjangan,tinsidental,
-            tTemu5, tTemu10, tTemu15, tTemu20,
+            tTemu5, tTemu10, tTemu15, tTemu20,tPT,
             tfasilitas_gym,tkelas_gym,tperalatan_gym,tgym_machine, tKeunggulan_gym;
 
     ImageView tImg_gym, tImg_trainer;
@@ -44,6 +44,8 @@ public class profil_gym extends AppCompatActivity {
         String temu_limbabelas = getIntent().getStringExtra("temu15");
         String temu_duapuluh = getIntent().getStringExtra("temu20");
 
+        String personalt = getIntent().getStringExtra("trainerGym");
+
         String fasilitas_gym = getIntent().getStringExtra("fasilitas_gym");
         String kelas_gym = getIntent().getStringExtra("kelas_gym");
         String peralatan_gym = getIntent().getStringExtra("peralatan_gym");
@@ -67,7 +69,7 @@ public class profil_gym extends AppCompatActivity {
         tTemu10 = (TextView) findViewById(R.id.tv_10Temu);
         tTemu15 = (TextView) findViewById(R.id.tv15Temu);
         tTemu20 = (TextView) findViewById(R.id.tv20Temu);
-
+        tPT = (TextView) findViewById(R.id.tvTampilPT);
         tfasilitas_gym = (TextView) findViewById(R.id.tvFasilitas);
         tkelas_gym = (TextView) findViewById(R.id.tvKelas);
         tperalatan_gym = (TextView) findViewById(R.id.tvPeralatanKebug);
@@ -92,7 +94,7 @@ public class profil_gym extends AppCompatActivity {
         tTemu10.setText("Harga 10x Pertemuan: "+temu_sepuluh);
         tTemu15.setText("Harga 15x Pertemuan: "+temu_limbabelas);
         tTemu20.setText("Harga 20x Pertemuan: "+temu_duapuluh);
-
+        tPT.setText(personalt);
         tfasilitas_gym.setText(fasilitas_gym);
         tkelas_gym.setText(kelas_gym);
         tperalatan_gym.setText(peralatan_gym);

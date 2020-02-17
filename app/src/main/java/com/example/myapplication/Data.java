@@ -32,7 +32,6 @@ public class Data implements Serializable {
     private String fasilitas,kelas, peralatan_kebugaran, gymmachine ,keunggulan_gym;
 
     private String imgUrl;
-    private String imgUrlTrainer;
 
     public Data() {
     }
@@ -43,7 +42,7 @@ public class Data implements Serializable {
                 String enamBulan, String biayaPerpanjangan,
                 String biaya_5Pertemuan, String biaya_10Pertemuan,
                 String biaya_15Pertemuan, String biaya_20Pertemuan,String namaTrainerGym,
-                String imgUrl,String imgUrlTrainer, String fasilitas, String kelas, String peralatan_kebugaran, String gymmachine, String keunggulan_gym) {
+                String imgUrl, String fasilitas, String kelas, String peralatan_kebugaran, String gymmachine, String keunggulan_gym) {
 
         this.namaGym = namaGym;
         this.alamatGym = alamatGym;
@@ -60,7 +59,6 @@ public class Data implements Serializable {
         this.biaya_20Pertemuan = biaya_20Pertemuan;
         this.namaTrainerGym = namaTrainerGym;
         this.imgUrl = imgUrl;
-        this.imgUrlTrainer = imgUrlTrainer;
         this.fasilitas = fasilitas;
         this.kelas = kelas;
         this.peralatan_kebugaran = peralatan_kebugaran;
@@ -213,17 +211,12 @@ public class Data implements Serializable {
         this.biaya_15Pertemuan = biaya_15Pertemuan;
     }
 
-    public String getImgUrlTrainer() {
-        return imgUrlTrainer;
-    }
 
     public String getBiaya_20Pertemuan() {
         return biaya_20Pertemuan;
     }
 
-    public void setImgUrlTrainer(String imgUrlTrainer) {
-        this.imgUrlTrainer = imgUrlTrainer;
-    }
+
 
     public void setBiaya_20Pertemuan(String biaya_20Pertemuan) {
         this.biaya_20Pertemuan = biaya_20Pertemuan;
@@ -252,7 +245,6 @@ public class Data implements Serializable {
                 ", gymmachine='" + gymmachine + '\'' +
                 ", keunggulan='" + keunggulan_gym + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
-                ", imgUrlTrainer='" + imgUrlTrainer + '\'' +
                 '}';
     }
 }

@@ -95,6 +95,8 @@ public class gym extends AppCompatActivity {
                         i.putExtra("temu15",data.getBiaya_15Pertemuan());
                         i.putExtra("temu20",data.getBiaya_20Pertemuan());
 
+                        i.putExtra("trainerGym",data.getNamaTrainerGym());
+
                         i.putExtra("fasilitas_gym",data.getFasilitas());
                         i.putExtra("kelas_gym",data.getKelas());
                         i.putExtra("peralatan_gym",data.getPeralatan_kebugaran());

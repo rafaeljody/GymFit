@@ -34,8 +34,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
 
     DatabaseReference database; // untuk mengambil root pada database
 
-    Button ch,ch2;
-    ImageView img2;
+    Button ch;
 
     EditText etNamaGym, etAlamatGym, etNomorHP; // Detail GYM
     EditText etPendaftar, etInsidental, etBiaya1, etBiaya2, etBiaya3, etBiaya6, etPerpanjangan; // Paket Membership
@@ -61,8 +60,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
 
         ch=(Button)findViewById(R.id.buttonChoose);
         img=(ImageView)findViewById(R.id.imageView);
-        ch2=(Button)findViewById(R.id.buttonChoose2);
-        img2=(ImageView)findViewById(R.id.imageView2);
 
         ch.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -70,14 +67,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
                 Filechoser();
             }
         }
-        );
-
-        ch2.setOnClickListener(new View.OnClickListener(){
-                                  @Override
-                                  public void onClick(View view){
-                                      Filechoser2();
-                                  }
-                              }
         );
 
         //inisialisasi Detail GYM
@@ -140,7 +129,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
         btSubmitDB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(uploadTask!=null && uploadTask.isInProgress() && uploadTask2!=null && uploadTask2.isInProgress()){
+                if(uploadTask!=null && uploadTask.isInProgress() ){
                     Toast.makeText(FormTambahGymActivity.this, "upload in progress",Toast.LENGTH_LONG).show();
                 }else{
                     FileUploader();
@@ -169,28 +158,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
                             @Override
                             public void onSuccess(Uri uri) {
                                     temp1=uri.toString();
-                            }
-                        });
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception exception) {
-                        // Handle unsuccessful uploads
-                        // ...
-                    }
-                });
-        final StorageReference ref2=mStorageReference2.child(System.currentTimeMillis()+"."+getExtension(imguri2));
-        uploadTask2= ref2.putFile(imguri2)
-                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                    @Override
-                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                        // Get a URL to the uploaded content
-                        Toast.makeText(FormTambahGymActivity.this, "image uploaded succesfully",Toast.LENGTH_LONG).show();
-                        ref2.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
-                            @Override
-                            public void onSuccess(Uri uri) {
-                                temp2=uri.toString();
                                 submitData(new Data(
                                         etNamaGym.getText().toString(),
                                         etAlamatGym.getText().toString(),
@@ -207,13 +174,12 @@ public class FormTambahGymActivity extends AppCompatActivity {
                                         etTemu20.getText().toString(),
                                         etNamaTrainerGym.getText().toString(),
                                         temp1,
-                                        temp2,
                                         etFasilitas.getText().toString(),
                                         etKelas.getText().toString(),
                                         etPeralatan.getText().toString(),
                                         etGymmachine.getText().toString(),
                                         etKeunggulan.getText().toString()
-                                        ));
+                                ));
                             }
                         });
                     }
@@ -234,12 +200,7 @@ public class FormTambahGymActivity extends AppCompatActivity {
         intent.setAction(Intent.ACTION_GET_CONTENT);
         startActivityIfNeeded(intent, 1);
     }
-    private void Filechoser2(){
-        Intent intent=new Intent();
-        intent.setType("image/*");
-        intent.setAction(Intent.ACTION_GET_CONTENT);
-        startActivityIfNeeded(intent, 2);
-    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
@@ -247,11 +208,6 @@ public class FormTambahGymActivity extends AppCompatActivity {
         if(requestCode==1 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
             imguri=data.getData();
             img.setImageURI(imguri);
-        }
-        if(requestCode==2 && resultCode==RESULT_OK && data!=null && data.getData()!=null){
-            imguri2=data.getData();
-            img2.setImageURI(imguri2);
-
         }
     }
 
