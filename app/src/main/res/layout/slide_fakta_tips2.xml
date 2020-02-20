@@ -26,7 +26,7 @@
 
 
             <com.zolad.zoominimageview.ZoomInImageView
-                android:id="@+id/text_FaktaTips"
+                android:id="@+id/FaktaTips"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"

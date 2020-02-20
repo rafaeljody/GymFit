@@ -20,7 +20,7 @@ public class MasukEduActivity extends AppCompatActivity {
         btn.setOnClickListener(new android.view.View.OnClickListener() {
             @Override
             public void onClick(android.view.View view) {
-                Intent intent = new Intent(MasukEduActivity.this, TipsActivity.class);
+                Intent intent = new Intent(MasukEduActivity.this, pilih_kategori.class);
                 startActivity(intent);
             }
         });

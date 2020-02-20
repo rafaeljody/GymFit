@@ -15,5 +15,13 @@
 
     <string name="slide_3_title">TRAINER</string>
     <string name="slide_3_desc">Memberikan informasi personal trainer</string>
+    <string name="title_activity_pilih_kategori">pilih_kategori</string>
+
+    <string name="kecepatan">https://youtu.be/fVraWQ_nUjE</string>
+    <string name="power">https://youtu.be/jScVyFeV80E</string>
+    <string name="daya">https://youtu.be/pJf2U4lzPLo</string>
+    <string name="otot">https://youtu.be/pAGxwki4XdA</string>
+    <string name="kekuatan">https://youtu.be/zV99now1GAI</string>
+
 
 </resources>

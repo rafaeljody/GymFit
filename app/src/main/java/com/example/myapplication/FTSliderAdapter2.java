@@ -2,7 +2,6 @@ package com.example.myapplication;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.res.TypedArray;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,17 +9,17 @@ import android.view.ViewGroup;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-import com.example.myapplication.R;
+
+public class FTSliderAdapter2 extends PagerAdapter {
+
+    public int[] image_resource= {R.drawable.edu6,R.drawable.edu7,R.drawable.edu8,R.drawable.edu9,R.drawable.edu10};
+    public String[] link ={"https://youtu.be/pJf2U4lzPLo","https://youtu.be/zV99now1GAI","https://youtu.be/jScVyFeV80E","https://youtu.be/fVraWQ_nUjE","https://youtu.be/pAGxwki4XdA"};
 
 
-public class FTSliderAdapter extends PagerAdapter {
-
-    public int[] image_resource= {R.drawable.edu1,R.drawable.edu2,R.drawable.edu3,R.drawable.edu4,R.drawable.edu5};
 
     Context context;
     LayoutInflater layoutInflater;
@@ -31,7 +30,7 @@ public class FTSliderAdapter extends PagerAdapter {
     }
 
 
-    public FTSliderAdapter(Context context){
+    public FTSliderAdapter2(Context context){
         this.context = context;
     }
 
@@ -63,18 +62,27 @@ public class FTSliderAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
 
         layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.slide_fakta_tips,container,false);
+        View view = layoutInflater.inflate(R.layout.slide_fakta_tips2,container,false);
 
 
-        ImageView image_faktatips =(ImageView) view.findViewById(R.id.text_FaktaTips);
+        ImageView image_faktatips =(ImageView) view.findViewById(R.id.FaktaTips);
         image_faktatips.setAnimation(AnimationUtils.loadAnimation(context, R.anim.translate_y_show3));
         image_faktatips.setImageResource(image_resource[position]);
 
+
+        final String s = link[position];
         container.addView(view);
 
-
-
-
+        image_faktatips.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setAction(Intent.ACTION_VIEW);
+                intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                intent.setData(Uri.parse(s));
+                v.getContext().startActivity(intent);
+            }
+        });
 
         return view;
     }

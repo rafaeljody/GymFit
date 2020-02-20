@@ -7,10 +7,15 @@
         android:hardwareAccelerated="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
         android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+
         android:theme="@style/AppTheme">
+
+
+        <activity android:name=".tips_latihan"></activity>
+        <activity android:name=".pilih_kategori" />
         <activity android:name=".profil_trainer_edit" />
         <activity android:name=".MasukEduActivity" />
         <activity android:name=".form_edit_data_trainer" />
@@ -46,5 +51,8 @@
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
 </manifest>
