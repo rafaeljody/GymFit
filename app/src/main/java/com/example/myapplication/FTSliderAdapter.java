@@ -18,7 +18,7 @@ import com.example.myapplication.R;
 
 public class FTSliderAdapter extends PagerAdapter {
 
-    public int[] image_resource= {R.drawable.edu1,R.drawable.edu2,R.drawable.edu3,R.drawable.edu4,R.drawable.edu5};
+    public int[] image_resource= {R.drawable.edu1,R.drawable.edu2,R.drawable.edu3,R.drawable.edu4,R.drawable.edu5,R.drawable.edu6,R.drawable.edu7,R.drawable.edu8,R.drawable.edu9,R.drawable.edu10};
     Context context;
     LayoutInflater layoutInflater;
 
