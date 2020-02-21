@@ -38,7 +38,6 @@
         android:layout_alignParentLeft="true" />
 
     <TextView
-        android:id="@+id/swipe"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Geser untuk melihat info lain"
@@ -50,11 +49,10 @@
         />
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="100dp"
-        android:src="@drawable/swipe"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="110dp"
-
+        android:layout_width="35dp"
+        android:layout_height="90dp"
+        android:src="@drawable/swipee"
+        android:layout_marginLeft="45dp"
+        android:layout_marginTop="115dp"
         />
 </RelativeLayout>
