@@ -16,8 +16,8 @@ import androidx.viewpager.widget.PagerAdapter;
 
 public class FTSliderAdapter2 extends PagerAdapter {
 
-    public int[] image_resource= {R.drawable.edu6,R.drawable.edu7,R.drawable.edu8,R.drawable.edu9,R.drawable.edu10};
-    public String[] link ={"https://youtu.be/pJf2U4lzPLo","https://youtu.be/zV99now1GAI","https://youtu.be/jScVyFeV80E","https://youtu.be/fVraWQ_nUjE","https://youtu.be/pAGxwki4XdA"};
+    public int[] image_resource= {R.drawable.edu6,R.drawable.edu7,R.drawable.edu8,R.drawable.edu9revis,R.drawable.edu10};
+    public String[] link ={"https://youtu.be/pJf2U4lzPLo","https://youtu.be/zV99now1GAI","https://youtu.be/jScVyFeV80E","https://youtu.be/0nixeAEiras","https://youtu.be/pAGxwki4XdA"};
 
 
 
