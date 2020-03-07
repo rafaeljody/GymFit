@@ -2,7 +2,10 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -53,4 +56,23 @@ public class profil_trainer extends AppCompatActivity {
 
         Picasso.get().load(img).into(tImg);
     }
+
+    public void nope (View view){
+        try {
+            String text = "Terimakasih telah menggunakan GYM FIT, silakan bertanya: \n\n";// Replace with your message.
+
+            String toNumber = "6285643377456"; // Replace with mobile phone number without +Sign or leading zeros, but with country code
+            //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
+
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+toNumber +"&text="+text));
+            startActivity(intent);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+    }
+
 }

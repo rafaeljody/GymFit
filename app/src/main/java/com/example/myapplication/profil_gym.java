@@ -2,8 +2,11 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.Image;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,7 +21,7 @@ public class profil_gym extends AppCompatActivity {
             tPendaftaran,tbiaya_satu,tbiaya_dua,
             tbiaya_tiga,tbiaya_enam, tperpanjangan,tinsidental,
             tTemu5, tTemu10, tTemu15, tTemu20,tPT,
-            tfasilitas_gym,tkelas_gym,tperalatan_gym,tgym_machine, tKeunggulan_gym;
+            tfasilitas_gym,tkelas_gym,tperalatan_gym,tgym_machine, tKeunggulan_gym, tNoHp;
 
     ImageView tImg_gym, tImg_trainer;
 
@@ -26,6 +29,10 @@ public class profil_gym extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil_gym);
+
+
+        TextView tNoHp = findViewById(R.id.tvNoHp);
+
 
         String nama_gym = getIntent().getStringExtra("namagym");
         String alamat_gym = getIntent().getStringExtra("alamatgym");
@@ -105,6 +112,24 @@ public class profil_gym extends AppCompatActivity {
         Picasso.get().load(img_gym).into(tImg_gym);
 
 
+
+    }
+
+    public void nope(View view){
+        try {
+            String text = "Terimakasih telah menggunakan GYM FIT, silakan bertanya: \n\n";// Replace with your message.
+
+            String toNumber = "6285643377456"; // Replace with mobile phone number without +Sign or leading zeros, but with country code
+            //Suppose your country is India and your phone number is “xxxxxxxxxx”, then you need to send “91xxxxxxxxxx”.
+
+
+            Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("http://api.whatsapp.com/send?phone="+toNumber +"&text="+text));
+            startActivity(intent);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
 
     }
 }
