@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:gravity="center"
     android:background="@android:color/white">
 
@@ -14,4 +15,33 @@
         android:layout_width="250dp"
         android:layout_height="250dp"
         android:src="@drawable/logobiru" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ahmad Ridwan"
+        android:layout_marginTop="5dp"
+        android:textColor="#252527"
+        android:fontFamily="@font/montserratbold"
+        android:textSize="18sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="Program Pascasarjana Ilmu Keolahragaan"
+        android:fontFamily="@font/montserratbold"
+        android:textSize="12sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="Universitas Negeri Yogyakarta"
+        android:fontFamily="@font/montserratbold"
+        android:textSize="12sp"
+        />
+
 </LinearLayout>
